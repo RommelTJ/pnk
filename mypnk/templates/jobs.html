@@ -1,0 +1,142 @@
+{% extends 'mypnk_base.html' %}
+
+{% load static %}
+
+{% block container %}
+
+<div id="purnkleenJobsFeature">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-7">
+                <div class="jobs-motto">COME TAKE OUR JOBS<br><span class="solutions">SERIOUSLY</span></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container purnkleen-marketing">
+
+    <div id="jobs" class="row featurette">
+        <div class="col-md-12">
+            <h2 class="featurette-heading">Open Jobs</span></h2>
+            <p class="lead">Thank you for considering employment opportunities with Pur'N'Kleen Company!
+                Please find below our current job opportunities.  To apply, please scroll all the way to the bottom and
+                fill out an application.</p>
+            <table class="table table-striped lead">
+                <thead>
+                    <tr>
+                        <th>Role</th>
+                        <th>Department</th>
+                    </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td scope="row">Head of Exploration and Production</td>
+                    <td>Exploration and Production</td>
+                </tr>
+                <tr>
+                    <td scope="row">Head of Marketing and Sales</td>
+                    <td>Marketing and Sales</td>
+                </tr>
+                <tr>
+                    <td scope="row">Head of Strategic Planning and Market Research</td>
+                    <td>Strategic Planning and Market Research</td>
+                </tr>
+                <tr>
+                    <td scope="row">Head of Safety and Security</td>
+                    <td>Safety and Security</td>
+                </tr>
+                <tr>
+                    <td scope="row">Starfarer Captain</td>
+                    <td>Exploration and Production</td>
+                </tr>
+                <tr>
+                    <td scope="row">Constellation Captain</td>
+                    <td>Exploration and Production</td>
+                </tr>
+                <tr>
+                    <td scope="row">Hull Captain</td>
+                    <td>Exploration and Production</td>
+                </tr>
+                <tr>
+                    <td scope="row">Orion Captain</td>
+                    <td>Exploration and Production</td>
+                </tr>
+                <tr>
+                    <td scope="row">Financial Analyst</td>
+                    <td>Strategic Planning and Market Research</td>
+                </tr>
+                <tr>
+                    <td scope="row">Security Officer</td>
+                    <td>Safety and Security</td>
+                </tr>
+                <tr>
+                    <td scope="row">Ship Mate</td>
+                    <td>All Departments</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div id="values" class="row featurette">
+        <div class="col-md-7">
+            <h2 class="featurette-heading">Financial Rewards</span></h2>
+            <p class="lead">Pur'N'Kleen works to make you as much UEC as possible. You will make more money space
+                trucking with us than going alone because we share resources and split expenses. Safety and Performance
+                Bonuses are planned.</p>
+            <p class="lead">Not a miner or space trucker? No problem. We have opportunities for people that want to crew
+                ships in their off-times, focus on trading and market exploitation, exploration of new mining spots, and
+                defense. The main point is that since we're structured as an organization, we split our profits and take
+                care of each other. This allows our members to explore different careers without having to worry too
+                much about making ends meet or feel pressured to fulfill a certain role.</p>
+        </div>
+        <div class="col-md-5">
+            <img data-holder-rendered="true" src="{% static 'img/UEC_Credits.jpg' %}" class="featurette-image img-responsive center-block" alt="UEC Credits">
+        </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div id="perks" class="row featurette">
+        <div class="col-md-5">
+            <img data-holder-rendered="true" src="{% static 'img/Deck_planning.jpg' %}" class="featurette-image img-responsive center-block" alt="Perks">
+        </div>
+        <div class="col-md-7">
+            <h2 class="featurette-heading">Why Pur'N'Kleen Company?</span></h2>
+            <p class="lead">Here are some of our perks: </p>
+            <ul class="lead">
+                <li>Pretty awesome coworkers (at least we think so)</li>
+                <li>Training and Development</li>
+                <li>Regular Fleet Events</li>
+                <li>Work/Life Balance (no mandatory activities)</li>
+                <li>Safety and Performance Bonuses</li>
+                <li>Diverse and Inclusive Community</li>
+                <li>Free meals and Greycat rides</li>
+            </ul>
+        </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div id="apply" class="row featurette">
+        <div class="col-md-7">
+            <h2 class="featurette-heading">Application</span></h2>
+            <p class="lead">Thank you for considering joining the Pur'N'Kleen Company! You can apply by clicking the image
+                on the right or by clicking this <a href="http://goo.gl/forms/UulCFvrzxt" target="_blank">link</a>,
+                which will take you to an application form to fill in. Once received, applications
+                are reviewed and applicants are notified if they are rejected or approved as soon as possible.
+            </p>
+        </div>
+        <div class="col-md-5">
+            <a href="http://goo.gl/forms/UulCFvrzxt" target="_blank">
+                <img data-holder-rendered="true" src="{% static 'img/PurNKleen_logo.png' %}" class="featurette-image img-responsive center-block" alt="Application">
+            </a>
+        </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+{% endblock %}

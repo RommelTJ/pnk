@@ -1,0 +1,100 @@
+{% extends 'mypnk_base.html' %}
+
+{% load static %}
+
+{% block container %}
+
+    <div id="purnkleenFeature">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-7 starfarer">
+                    <div class="motto">Wherever There’s a Job to Be Done.<br/><span class="solutions">We have solutions</span></div>
+                </div>
+                <div class="col-sm-5 fleet-ops">
+                    <div id="purnkleenOpsContainer">
+                        <div id="purnkleenOpsTitle">Fleet Events</div>
+                        <div id="purnkleenEventsContainer">
+                            <div class="events-padding">
+                                <div class="event-description">
+                                    <a class="opslink" href="{% url 'jobs' %}">
+                                        Travel to Yela
+                                    </a>
+                                </div>
+                                <div id="clock1" class="event-clock"></div>
+                            </div>
+                            <!--<div class="events-padding">-->
+                            <!--<div class="event-description">-->
+                            <!--<a class="opslink" href="jobs.html">-->
+                            <!--CitizenCon 2946 Watch Party-->
+                            <!--</a>-->
+                            <!--</div>-->
+                            <!--<div id="clock2" class="event-clock"></div>-->
+                            <!--</div>-->
+                            <!--<div class="events-padding">-->
+                            <!--<div class="event-description">-->
+                            <!--<a class="opslink" href="jobs.html">-->
+                            <!--CitizenCon 2946 Watch Party-->
+                            <!--</a>-->
+                            <!--</div>-->
+                            <!--<div id="clock3" class="event-clock"></div>-->
+                            <!--</div>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container purnkleen-marketing">
+    <!--Products-->
+    <div class="row">
+        <div class="col-lg-4">
+            <img src="{% static 'img/PNKBoostBarrel.png' %}" alt="Pur'N'Kleen Boost Fuel">
+            <h2>Pur'N'Kleen Boost Fuel</h2>
+            <p>Pur'N'Kleen Boost Fuel is a high-performance boost fuel designed to provide the maximum possible
+                acceleration for your engine.</p>
+            <p>Our advanced chemical compounds deliver the maximum amount of energy possible to your ship and outperform
+                the conventional boost fuel of our competitors. When life and death hang in the balance, the pros trust
+                Pur'N'Kleen Boost Fuel.</p>
+            <p><a class="btn btn-default purnkleen-order-btn" href="http://goo.gl/forms/JY74mi1Yx8" target="_blank" role="button">BUY NOW</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+            <img src="{% static 'img/PNKQuantumBarrel.png' %}" alt="Pur'N'Kleen Quantum Fuel">
+            <h2>Pur'N'Kleen Quantum Fuel</h2>
+            <p>Pur'N'Kleen Quantum Fuel offers outstanding wear protection under a wide variety of operating conditions
+                at a price that won't cut into your profits.</p>
+            <p>Nothing is more important to your ship than durability. And that's why every barrel of Pur'N'Kleen
+                Quantum Fuel is backed by millions of quantum jumps all over the 'Verse.
+            </p>
+            <p><a class="btn btn-default purnkleen-order-btn" href="http://goo.gl/forms/JY74mi1Yx8" target="_blank" role="button">BUY NOW</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+            <img src="{% static 'img/PNKRaceBarrel.png' %}" alt="Pur'N'Kleen Racing Fuel">
+            <h2>Pur'N'Kleen Racing Fuel</h2>
+            <p>These race-proven fuel products are designed to maximize performance in a wide range of race engine
+                applications and are trusted by many of the universe's most successful race teams. </p>
+            <p>Pur'N'Kleen Racing Fuel performance compounds utilize best-in-class anti-wear components to help
+                maximize power output while not sacrificing engine protection.</p>
+            <p><a class="btn btn-default purnkleen-order-btn" href="http://goo.gl/forms/JY74mi1Yx8" target="_blank" role="button">BUY NOW</a></p>
+        </div><!-- /.col-lg-4 -->
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+        <div class="col-md-7">
+            <h2 class="featurette-heading">Join Us!</span></h2>
+            <p class="lead">Pur'N'Kleen is a holistic company — this is a marathon, not a sprint. We want our members
+                to be challenged and grow. We want all our members to feel loved and appreciated. Our
+                <a href="{% url 'jobs' %}#perks">perks</a> are just one of the ways in which we show that.</p>
+            <p class="lead">We have best-in-class products and our ambitions are enormous. We're a fun-first
+                organization, and we believe that real-life friendships is the key to our organization.</p>
+        </div>
+        <div class="col-md-5">
+            <img data-holder-rendered="true" src="{% static 'img/Diversity.jpg' %}" class="featurette-image img-responsive center-block" alt="Diversity">
+        </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+{% endblock %}
