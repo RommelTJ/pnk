@@ -45,10 +45,51 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right purnkleen-navbar-nav">
-                <li><a href="{% url 'about' %}">About</a></li>
-                <li><a href="{% url 'team' %}">Team</a></li>
-                <li><a href="{% url 'jobs' %}">Jobs</a></li>
-                <li><a href="https://www.youtube.com/channel/UCD8dTZQH_uetn2-RK-DbKmQ" target="_blank">Podcast</a></li>
+                <li class="dropdown">
+                    <a href="{% url 'about' %}">About Us</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="{% url 'about' %}">Our Story</a></li>
+                        <li><a href="#">Vision Statement</a></li>
+                        <li><a href="#">Fundamental Values</a></li>
+                        <li><a href="#">Meet Our Team</a></li>
+                        <li><a href="#">Benefits</a></li>
+                        <li><a href="#">Bylaws</a></li>
+                        <li><a href="#">Partners</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">Join Us</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <a href="{% url 'about' %}">Solutions</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="{% url 'about' %}">Mission Planner</a></li>
+                        <li><a href="#">Fleet View</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <a href="{% url 'about' %}">Services</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="{% url 'about' %}">Fuel Services</a></li>
+                        <li><a href="#">Maintenance and Repair</a></li>
+                        <li><a href="#">Transportation</a></li>
+                        <li><a href="#">Implementation</a></li>
+                        <li><a href="#">Support and Training</a></li>
+                        <li><a href="#">Consulting Services</a></li>
+                        <li><a href="#">Professional Services</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <a href="{% url 'about' %}">Knowledge</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="{% url 'about' %}">PNK Podcast</a></li>
+                        <li><a href="#">Links and Tools</a></li>
+                        <li><a href="#">Imperial News Network</a></li>
+                    </ul>
+                </li>
+
                 <li><a id="order" href="http://goo.gl/forms/JY74mi1Yx8" target="_blank"><button type="button" class="btn btn-primary btn-lg purnkleen-order-btn">MAKE AN ORDER</button></a></li>
             </ul>
         </div><!--/.nav-collapse -->
@@ -94,25 +135,26 @@
 <script src="{% static 'js/bootstrap.min.js' %}"></script>
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 <script src="{% static 'js/ie10-viewport-bug-workaround.js' %}"></script>
-<!--Countdown-->
-<script src="{% static 'js/jquery.countdown.min.js' %}"></script>
-<script src="{% static 'js/moment.js' %}"></script>
-<script src="{% static 'js/moment-timezone-with-data-2010-2020.js' %}"></script>
-<script>
-    var clock1 = moment.tz("2017-05-07 14:00", "America/Los_Angeles");
-    //var clock2 = moment.tz("2016-10-08 12:00", "America/Los_Angeles");
-    //var clock3 = moment.tz("2016-10-09 15:00", "America/Los_Angeles");
-
-    jQuery('#clock1').countdown(clock1.toDate(), function(event) {
-        jQuery(this).html(event.strftime('%D days %H:%M:%S'));
-    });
-    //    jQuery('#clock2').countdown(clock2.toDate(), function(event) {
-    //        jQuery(this).html(event.strftime('%D days %H:%M:%S'));
-    //    });
-    //    jQuery('#clock3').countdown(clock3.toDate(), function(event) {
-    //        jQuery(this).html(event.strftime('%D days %H:%M:%S'));
-    //    });
-</script>
+<script src="{% static 'js/dropdown-hover.js' %}"></script>
+{#<!--Countdown-->#}
+{#<script src="{% static 'js/jquery.countdown.min.js' %}"></script>#}
+{#<script src="{% static 'js/moment.js' %}"></script>#}
+{#<script src="{% static 'js/moment-timezone-with-data-2010-2020.js' %}"></script>#}
+{#<script>#}
+{#    var clock1 = moment.tz("2017-05-07 14:00", "America/Los_Angeles");#}
+{#    //var clock2 = moment.tz("2016-10-08 12:00", "America/Los_Angeles");#}
+{#    //var clock3 = moment.tz("2016-10-09 15:00", "America/Los_Angeles");#}
+{##}
+{#    jQuery('#clock1').countdown(clock1.toDate(), function(event) {#}
+{#        jQuery(this).html(event.strftime('%D days %H:%M:%S'));#}
+{#    });#}
+{#    //    jQuery('#clock2').countdown(clock2.toDate(), function(event) {#}
+{#    //        jQuery(this).html(event.strftime('%D days %H:%M:%S'));#}
+{#    //    });#}
+{#    //    jQuery('#clock3').countdown(clock3.toDate(), function(event) {#}
+{#    //        jQuery(this).html(event.strftime('%D days %H:%M:%S'));#}
+{#    //    });#}
+{#</script>#}
 <!--Google Analytics-->
 <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

@@ -55,6 +55,19 @@ a#order {
     margin-top: 0;
 }
 
+.dropdown-menu {
+    position: absolute;
+    display: none;
+    top: 76px;
+    left: 0;
+    z-index: 99;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-top: 3px solid #FFDE30;
+    font-size: 16px;
+}
+
 /*Footer*/
 .footer {
     position: absolute;
