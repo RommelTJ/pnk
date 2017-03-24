@@ -5,6 +5,10 @@ def index(request):
     return render(request, 'index.html', {})
 
 
+def giveaway(request):
+    return render(request, 'giveaway.html', {})
+
+
 #########################
 # Start About Views     #
 #########################
