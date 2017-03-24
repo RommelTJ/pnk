@@ -100,15 +100,20 @@ a#order {
 }
 
 
-/*Big Feature*/ /*purnkleenTeamFeature*/
+/*Big Feature*/
+/*purnkleenTeamFeature*/
+
 div#purnkleenFeature {
     background-image: url("../img/earth_background.jpg");
-    background-color: rgba(0,0,0, 0.9);
-    margin-bottom: 60px;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    background-position: center;
+    height: 70vh;
     padding-bottom: 20px;
+    margin-bottom: 50px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 div#purnkleenTeamFeature {
     background-image: url("../img/olisar.jpg");
@@ -218,11 +223,6 @@ a.opslink:hover, a.opslink:active, a.opslink:focus, a.opslink:active:focus {
         height: 70vh;
         background-repeat: no-repeat;
         background-position: center center;
-        background-size: 100% auto;
-    }
-    div#purnkleenFeature {
-        background-image: url("../img/earth_background.jpg");
-        height: 70vh;
         background-size: 100% auto;
     }
     div#purnkleenTeamFeature {
