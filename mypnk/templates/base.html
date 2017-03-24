@@ -49,48 +49,50 @@
                     <a href="{% url 'about' %}">About Us</a>
                     <ul class="dropdown-menu">
                         <li><a href="{% url 'about' %}">Our Story</a></li>
-                        <li><a href="#">Vision Statement</a></li>
-                        <li><a href="#">Fundamental Values</a></li>
-                        <li><a href="#">Meet Our Team</a></li>
-                        <li><a href="#">Benefits</a></li>
-                        <li><a href="#">Bylaws</a></li>
-                        <li><a href="#">Partners</a></li>
+                        <li><a href="{% url 'vision' %}">Vision Statement</a></li>
+                        <li><a href="{% url 'values' %}">Fundamental Values</a></li>
+                        <li><a href="{% url 'team' %}">Meet Our Team</a></li>
+                        <li><a href="{% url 'benefits' %}">Benefits</a></li>
+                        <li><a href="{% url 'bylaws' %}">Bylaws</a></li>
+                        <li><a href="{% url 'partners' %}">Partners</a></li>
                         <li role="separator" class="divider"></li>
-                        <li><a href="#">Join Us</a></li>
+                        <li><a href="{% url 'join-pnk' %}">Join Us</a></li>
                     </ul>
                 </li>
 
                 <li class="dropdown">
-                    <a href="{% url 'about' %}">Solutions</a>
+                    <a href="{% url 'fleet-view' %}">Solutions</a>
                     <ul class="dropdown-menu">
-                        <li><a href="{% url 'about' %}">Mission Planner</a></li>
-                        <li><a href="#">Fleet View</a></li>
+                        <li><a href="{% url 'mission-planner' %}">Mission Planner</a></li>
+                        <li><a href="{% url 'fleet-view' %}">Fleet View</a></li>
                     </ul>
                 </li>
 
                 <li class="dropdown">
-                    <a href="{% url 'about' %}">Services</a>
+                    <a href="{% url 'fuel-services' %}">Services</a>
                     <ul class="dropdown-menu">
-                        <li><a href="{% url 'about' %}">Fuel Services</a></li>
-                        <li><a href="#">Maintenance and Repair</a></li>
-                        <li><a href="#">Transportation</a></li>
-                        <li><a href="#">Implementation</a></li>
-                        <li><a href="#">Support and Training</a></li>
-                        <li><a href="#">Consulting Services</a></li>
-                        <li><a href="#">Professional Services</a></li>
+                        <li><a href="{% url 'fuel-services' %}">Fuel Services</a></li>
+                        <li><a href="{% url 'maintenance-and-repair' %}">Maintenance and Repair</a></li>
+                        <li><a href="{% url 'transportation' %}">Transportation</a></li>
+                        <li><a href="{% url 'implementation' %}">Implementation</a></li>
+                        <li><a href="{% url 'support-and-training' %}">Support and Training</a></li>
+                        <li><a href="{% url 'consulting-services' %}">Consulting Services</a></li>
+                        <li><a href="{% url 'professional-services' %}">Professional Services</a></li>
                     </ul>
                 </li>
 
                 <li class="dropdown">
-                    <a href="{% url 'about' %}">Knowledge</a>
+                    <a href="{% url 'pnk-podcast' %}">Knowledge</a>
                     <ul class="dropdown-menu">
-                        <li><a href="{% url 'about' %}">PNK Podcast</a></li>
-                        <li><a href="#">Links and Tools</a></li>
-                        <li><a href="#">Imperial News Network</a></li>
+                        <li><a href="{% url 'pnk-podcast' %}">PNK Podcast</a></li>
+                        <li><a href="{% url 'links-and-tools' %}">Links and Tools</a></li>
+                        <li><a href="http://imperialnews.network/" target="_blank">Imperial News Network</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="https://discord.gg/QADycb2" target="_blank">Add your content</a></li>
                     </ul>
                 </li>
 
-                <li><a id="order" href="http://goo.gl/forms/JY74mi1Yx8" target="_blank"><button type="button" class="btn btn-primary btn-lg purnkleen-order-btn">MAKE AN ORDER</button></a></li>
+                <li><a id="order" href="https://discord.gg/QADycb2" target="_blank"><button type="button" class="btn btn-primary btn-lg purnkleen-order-btn">CONTACT US</button></a></li>
             </ul>
         </div><!--/.nav-collapse -->
     </div>
