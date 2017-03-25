@@ -28,13 +28,14 @@ img#pnkLogo {
     background-color: black;
     border: none;
 }
-.purnkleen-contact-btn {
+.purnkleen-yellow-btn {
     background-color: #FFE411;
-    color: black !important;
+    color: black;
     text-transform: uppercase;
 }
-.purnkleen-contact-btn:hover, .purnkleen-contact-btn:active, .purnkleen-contact-btn:focus, .purnkleen-contact-btn:active:focus {
-    background-color: #ebe10b;
+.purnkleen-yellow-btn:hover, .purnkleen-yellow-btn:active, .purnkleen-yellow-btn:focus, .purnkleen-yellow-btn:active:focus {
+    background-color: #EBE10B;
+    color: black;
 }
 .purnkleen-navbar-nav > li > a {
     font-size: 1.25em;
@@ -100,21 +101,31 @@ a#order {
 }
 
 /* Buttons */
-.purnkleen-action-btn {
+.purnkleen-red-btn {
     background-color: #ED173A;
-    color: #EAF1F1 !important;
+    color: #EAF1F1;
     text-transform: uppercase;
 }
-.purnkleen-action-btn:hover, .purnkleen-action-btn:active, .purnkleen-action-btn:focus, .purnkleen-action-btn:active:focus {
+.purnkleen-red-btn:hover, .purnkleen-red-btn:active, .purnkleen-red-btn:focus, .purnkleen-red-btn:active:focus {
     background-color: #D91434;
+    color: white;
 }
-.purnkleen-giveaway-btn {
+.purnkleen-green-btn {
     background-color: #38B819;
-    color: #EAF1F1 !important;
+    color: #EAF1F1;
     text-transform: uppercase;
 }
-.purnkleen-giveaway-btn:hover, .purnkleen-giveaway-btn:active, .purnkleen-giveaway-btn:focus, .purnkleen-giveaway-btn:active:focus {
+.purnkleen-green-btn:hover, .purnkleen-green-btn:active, .purnkleen-green-btn:focus, .purnkleen-green-btn:active:focus {
     background-color: #24b511;
+    color: white;
+}
+.purnkleen-black-btn {
+    background-color: black;
+    color: #EAF1F1;
+    text-transform: uppercase;
+}
+.purnkleen-black-btn:hover, .purnkleen-black-btn:active, .purnkleen-black-btn:focus, .purnkleen-black-btn:active:focus {
+    color: white;
 }
 
 /*Big Feature*/

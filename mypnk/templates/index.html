@@ -20,24 +20,45 @@
 
         <div class="row">
 
-            <div class="col-lg-4 col-sm-6">
-                <div class="preview">
-                    <div class="image">
-                        <a href="{% url 'registration_register' %}">
-                            <img class="img-responsive" src="{% static 'img/Diversity.jpg' %}" alt="Diversity"></a>
-                    </div>
-                    <div class="options">
-                        <h3>Oi! Pampaw!</h3>
-                        <p>To use the PNK solutions, you need to Log in or Sign Up. Or, you can also join us, sabe?</p>
-                        <div class="btn-group">
-                            <a class="btn btn-lg purnkleen-action-btn" href="{% url 'auth_login' %}">Log In</a>
+            {% if user.is_authenticated %}
+                <div class="col-lg-4 col-sm-6">
+                    <div class="preview">
+                        <div class="image">
+                            <a href="{% url 'join-pnk' %}">
+                                <img class="img-responsive" src="{% static 'img/Diversity.jpg' %}" alt="Diversity"></a>
                         </div>
-                        <div class="btn-group">
-                            <a class="btn btn-lg purnkleen-action-btn" href="{% url 'registration_register' %}">Sign Up</a>
+                        <div class="options">
+                            <h3>Oi! Pampaw!</h3>
+                            <p>Now that you're logged in, perhaps you want to join PNK as an affiliate or member, sa-sa?</p>
+                            <div class="btn-group">
+                                <a class="btn btn-lg purnkleen-red-btn" href="{% url 'auth_logout' %}">Sign Out</a>
+                            </div>
+                            <div class="btn-group">
+                                <a class="btn btn-lg purnkleen-yellow-btn" href="{% url 'join-pnk' %}">Join PNK</a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            {% else %}
+                <div class="col-lg-4 col-sm-6">
+                    <div class="preview">
+                        <div class="image">
+                            <a href="{% url 'registration_register' %}">
+                                <img class="img-responsive" src="{% static 'img/Diversity.jpg' %}" alt="Diversity"></a>
+                        </div>
+                        <div class="options">
+                            <h3>Oi! Pampaw!</h3>
+                            <p>To use the PNK solutions, you need to Register or Sign In. Or, you can also join us, sabe?</p>
+                            <div class="btn-group">
+                                <a class="btn btn-lg purnkleen-red-btn" href="{% url 'registration_register' %}">Register</a>
+                            </div>
+                            <div class="btn-group">
+                                <a class="btn btn-lg purnkleen-yellow-btn" href="{% url 'auth_login' %}">Sign In</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
 
             <div class="col-lg-4 col-sm-6">
                 <div class="preview">
@@ -52,7 +73,7 @@
                             for more details.
                         </p>
                         <div class="btn-group">
-                            <a class="btn btn-lg purnkleen-giveaway-btn" href="{% url 'giveaway' %}">I want a free ship</a>
+                            <a class="btn btn-lg purnkleen-green-btn" href="{% url 'giveaway' %}">More Details</a>
                         </div>
                     </div>
                 </div>
@@ -66,9 +87,12 @@
                     </div>
                     <div class="options">
                         <h3>Fuel Services</h3>
-                        <p>Coming soon</p>
+                        <p>
+                            Our line of fuel products and services are designed to give pros the performance they need
+                            to get their jobs done right.
+                        </p>
                         <div class="btn-group">
-                            <a class="btn btn-lg purnkleen-action-btn" href="{% url 'fuel-services' %}">Coming soon</a>
+                            <a class="btn btn-lg purnkleen-black-btn" href="{% url 'fuel-services' %}">Fuel Services</a>
                         </div>
                     </div>
                 </div>
@@ -86,9 +110,12 @@
                     </div>
                     <div class="options">
                         <h3>Maintenance Services</h3>
-                        <p>Coming soon</p>
+                        <p>
+                            Let us take care of the regular maintenance for your ships. Our professional mechanics can
+                            fix any problem.
+                        </p>
                         <div class="btn-group">
-                            <a class="btn btn-lg purnkleen-action-btn" href="{% url 'maintenance-and-repair' %}">Coming soon</a>
+                            <a class="btn btn-lg purnkleen-black-btn" href="{% url 'maintenance-and-repair' %}">Maintenance Services</a>
                         </div>
                     </div>
                 </div>
@@ -97,14 +124,13 @@
             <div class="col-lg-4 col-sm-6">
                 <div class="preview">
                     <div class="image">
-                        <a href="{% url 'fleet-view' %}">
-                            <img class="img-responsive" src="{% static 'img/FleetView.jpg' %}" alt="Fleet View"></a>
+                        <img class="img-responsive" src="{% static 'img/FleetView.jpg' %}" alt="Fleet View">
                     </div>
                     <div class="options">
                         <h3>Fleet Viewer</h3>
-                        <p>Coming soon</p>
+                        <p>A tool to help you manage your fleet.</p>
                         <div class="btn-group">
-                            <a class="btn btn-lg purnkleen-action-btn" href="{% url 'fleet-view' %}">Coming soon</a>
+                            <a class="btn btn-lg purnkleen-black-btn disabled" href="{% url 'fleet-view' %}">Coming soon</a>
                         </div>
                     </div>
                 </div>
@@ -113,14 +139,13 @@
             <div class="col-lg-4 col-sm-6">
                 <div class="preview">
                     <div class="image">
-                        <a href="{% url 'mission-planner' %}">
-                            <img class="img-responsive" src="{% static 'img/MissionPlanner.jpg' %}" alt="Mission Planner"></a>
+                        <img class="img-responsive" src="{% static 'img/MissionPlanner.jpg' %}" alt="Mission Planner">
                     </div>
                     <div class="options">
                         <h3>Mission Planner</h3>
-                        <p>Coming soon</p>
+                        <p>A tool to help you plan missions for your org.</p>
                         <div class="btn-group">
-                            <a class="btn btn-lg purnkleen-action-btn" href="{% url 'mission-planner' %}">Coming soon</a>
+                            <a class="btn btn-lg purnkleen-black-btn disabled" href="{% url 'mission-planner' %}">Coming soon</a>
                         </div>
                     </div>
                 </div>
