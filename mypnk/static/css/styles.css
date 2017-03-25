@@ -97,6 +97,7 @@ a#order {
 
 .preview .options p {
     margin-bottom: 2em;
+    min-height: 60px;
 }
 
 

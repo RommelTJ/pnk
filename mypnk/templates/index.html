@@ -24,13 +24,16 @@
                 <div class="preview">
                     <div class="image">
                         <a href="{% url 'registration_register' %}">
-                            <img class="img-responsive" src="https://placehold.it/1000x600" alt="Placeholder"></a>
+                            <img class="img-responsive" src="{% static 'img/Diversity.jpg' %}" alt="Diversity"></a>
                     </div>
                     <div class="options">
                         <h3>Oi! Pampaw!</h3>
                         <p>To use the PNK solutions, you need to Log in or Sign Up. Or, you can also join us, sabe?</p>
                         <div class="btn-group">
-                            <a class="btn btn-lg purnkleen-order-btn" href="{% url 'registration_register' %}">Register</a>
+                            <a class="btn btn-lg purnkleen-order-btn" href="{% url 'auth_login' %}">Log In</a>
+                        </div>
+                        <div class="btn-group">
+                            <a class="btn btn-lg purnkleen-order-btn" href="{% url 'registration_register' %}">Sign Up</a>
                         </div>
                     </div>
                 </div>
@@ -39,14 +42,17 @@
             <div class="col-lg-4 col-sm-6">
                 <div class="preview">
                     <div class="image">
-                        <a href="{% url 'mission-planner' %}">
-                            <img class="img-responsive" src="https://placehold.it/1000x600" alt="Placeholder"></a>
+                        <a href="{% url 'giveaway' %}">
+                            <img class="img-responsive" src="{% static 'img/Archimedes.jpg' %}" alt="P-72 Archimedes LTI"></a>
                     </div>
                     <div class="options">
-                        <h3>Mission Planner</h3>
-                        <p>Coming soon</p>
+                        <h3>FREE P-72 Archimedes LTI</h3>
+                        <p>
+                            PNK is sponsoring an Interstellar Diplomacy "Diplomatic question of the month". Click below
+                            for more details.
+                        </p>
                         <div class="btn-group">
-                            <a class="btn btn-default purnkleen-order-btn" href="{% url 'mission-planner' %}">Coming soon</a>
+                            <a class="btn btn-lg purnkleen-order-btn" href="{% url 'giveaway' %}">I want a free ship</a>
                         </div>
                     </div>
                 </div>
@@ -55,14 +61,14 @@
             <div class="col-lg-4 col-sm-6">
                 <div class="preview">
                     <div class="image">
-                        <a href="{% url 'fleet-view' %}">
-                            <img class="img-responsive" src="https://placehold.it/1000x600" alt="Placeholder"></a>
+                        <a href="{% url 'fuel-services' %}">
+                            <img class="img-responsive" src="{% static 'img/Fuel.jpg' %}" alt="Fuel Services"></a>
                     </div>
                     <div class="options">
-                        <h3>Fleet Viewer</h3>
+                        <h3>Fuel Services</h3>
                         <p>Coming soon</p>
                         <div class="btn-group">
-                            <a class="btn btn-default purnkleen-order-btn" href="{% url 'fleet-view' %}">Coming soon</a>
+                            <a class="btn btn-lg purnkleen-order-btn" href="{% url 'fuel-services' %}">Coming soon</a>
                         </div>
                     </div>
                 </div>
@@ -75,49 +81,46 @@
             <div class="col-lg-4 col-sm-6">
                 <div class="preview">
                     <div class="image">
-                        <a href="{% url 'giveaway' %}">
-                            <img class="img-responsive" src="https://placehold.it/1000x600" alt="Placeholder"></a>
-                    </div>
-                    <div class="options">
-                        <h3>FREE P-72 archimedes LTI</h3>
-                        <p>
-                            PNK is sponsoring an Interstellar Diplomacy "Diplomatic question of the month". Click below
-                            for more details.
-                        </p>
-                        <div class="btn-group">
-                            <a class="btn btn-default purnkleen-order-btn" href="{% url 'giveaway' %}">I want a free ship</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-sm-6">
-                <div class="preview">
-                    <div class="image">
-                        <a href="{% url 'fuel-services' %}">
-                            <img class="img-responsive" src="https://placehold.it/1000x600" alt="Placeholder"></a>
-                    </div>
-                    <div class="options">
-                        <h3>Fuel Services</h3>
-                        <p>Coming soon</p>
-                        <div class="btn-group">
-                            <a class="btn btn-default purnkleen-order-btn" href="{% url 'fuel-services' %}">Coming soon</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-sm-6">
-                <div class="preview">
-                    <div class="image">
                         <a href="{% url 'maintenance-and-repair' %}">
-                            <img class="img-responsive" src="https://placehold.it/1000x600" alt="Placeholder"></a>
+                            <img class="img-responsive" src="{% static 'img/Maintenance.jpg' %}" alt="Maintenance and Repair"></a>
                     </div>
                     <div class="options">
                         <h3>Maintenance Services</h3>
                         <p>Coming soon</p>
                         <div class="btn-group">
-                            <a class="btn btn-default purnkleen-order-btn" href="{% url 'maintenance-and-repair' %}">Coming soon</a>
+                            <a class="btn btn-lg purnkleen-order-btn" href="{% url 'maintenance-and-repair' %}">Coming soon</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-sm-6">
+                <div class="preview">
+                    <div class="image">
+                        <a href="{% url 'fleet-view' %}">
+                            <img class="img-responsive" src="{% static 'img/FleetView.jpg' %}" alt="Fleet View"></a>
+                    </div>
+                    <div class="options">
+                        <h3>Fleet Viewer</h3>
+                        <p>Coming soon</p>
+                        <div class="btn-group">
+                            <a class="btn btn-lg purnkleen-order-btn" href="{% url 'fleet-view' %}">Coming soon</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-sm-6">
+                <div class="preview">
+                    <div class="image">
+                        <a href="{% url 'mission-planner' %}">
+                            <img class="img-responsive" src="{% static 'img/MissionPlanner.jpg' %}" alt="Mission Planner"></a>
+                    </div>
+                    <div class="options">
+                        <h3>Mission Planner</h3>
+                        <p>Coming soon</p>
+                        <div class="btn-group">
+                            <a class="btn btn-lg purnkleen-order-btn" href="{% url 'mission-planner' %}">Coming soon</a>
                         </div>
                     </div>
                 </div>
