@@ -104,7 +104,7 @@ a#order {
 /*purnkleenTeamFeature*/
 
 div#purnkleenFeature {
-    background-image: url("../img/earth_background.jpg");
+    background-image: url("../img/Yela.jpg");
     height: 70vh;
     padding-bottom: 20px;
     margin-bottom: 50px;
@@ -180,7 +180,6 @@ div#purnkleenOpsTitle {
 .motto {
     color: #FFE411;
     font-size: 30px;
-    padding-top: 60px;
     font-family: Furore;
     text-shadow: 0px 0px 10px rgba(0,0,0,0.74);
 }
