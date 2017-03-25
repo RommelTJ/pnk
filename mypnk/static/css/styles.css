@@ -28,14 +28,13 @@ img#pnkLogo {
     background-color: black;
     border: none;
 }
-.purnkleen-order-btn {
+.purnkleen-contact-btn {
     background-color: #FFE411;
     color: black !important;
+    text-transform: uppercase;
 }
-.purnkleen-order-btn:hover, .purnkleen-order-btn:active, .purnkleen-order-btn:focus, .purnkleen-order-btn:active:focus {
-    color: black;
-    background-color: #ffde30;
-    border-color: #FFE411;
+.purnkleen-contact-btn:hover, .purnkleen-contact-btn:active, .purnkleen-contact-btn:focus, .purnkleen-contact-btn:active:focus {
+    background-color: #ebe10b;
 }
 .purnkleen-navbar-nav > li > a {
     font-size: 1.25em;
@@ -64,7 +63,7 @@ a#order {
     background: #fff;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    border-top: 3px solid #FFDE30;
+    border-top: 3px solid #FFE411;
     font-size: 16px;
 }
 
@@ -100,6 +99,23 @@ a#order {
     min-height: 60px;
 }
 
+/* Buttons */
+.purnkleen-action-btn {
+    background-color: #ED173A;
+    color: #EAF1F1 !important;
+    text-transform: uppercase;
+}
+.purnkleen-action-btn:hover, .purnkleen-action-btn:active, .purnkleen-action-btn:focus, .purnkleen-action-btn:active:focus {
+    background-color: #D91434;
+}
+.purnkleen-giveaway-btn {
+    background-color: #38B819;
+    color: #EAF1F1 !important;
+    text-transform: uppercase;
+}
+.purnkleen-giveaway-btn:hover, .purnkleen-giveaway-btn:active, .purnkleen-giveaway-btn:focus, .purnkleen-giveaway-btn:active:focus {
+    background-color: #24b511;
+}
 
 /*Big Feature*/
 /*purnkleenTeamFeature*/
