@@ -132,44 +132,55 @@ a#order {
 /*purnkleenTeamFeature*/
 
 div#purnkleenFeature {
-    background-image: url("../img/Yela.jpg");
     height: 70vh;
     padding-bottom: 20px;
     margin-bottom: 50px;
 
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
+    background: url("../img/Yela.jpg") no-repeat fixed center;
     background-size: cover;
 }
-div#purnkleenTeamFeature {
-    background-image: url("../img/olisar.jpg");
-    background-color: rgba(0,0,0, 0.9);
-    margin-bottom: 20px;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    background-position: center;
-    padding-bottom: 10px;
-}
-div#purnkleenJobsFeature {
-    background-image: url("../img/orion_starfarers_jobs.jpg");
-    background-color: rgba(0,0,0, 0.9);
-    margin-bottom: 20px;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    background-position: center;
-    padding-bottom: 10px;
-}
+
 div#purnkleenAboutFeature {
-    background-image: url("../img/LandedConny.jpg");
-    background-color: rgba(0,0,0, 0.9);
+    height: 20vh;
+    padding-bottom: 20px;
     margin-bottom: 20px;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    background-position: center;
-    padding-bottom: 10px;
+
+    background: url("../img/olisar.jpg") no-repeat fixed center;
+    background-size: cover;
 }
+div#purnkleenSolutionsFeature {
+    height: 20vh;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+
+    background: url("../img/orion_starfarers_jobs.jpg") no-repeat fixed center;
+    background-size: cover;
+}
+div#purnkleenServicesFeature {
+    height: 20vh;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+
+    background: url("../img/LandedConny.jpg") no-repeat fixed center;
+    background-size: cover;
+}
+div#purnkleenKnowledgeFeature {
+    height: 20vh;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+
+    background: url("../img/Yela.jpg") no-repeat fixed center;
+    background-size: cover;
+}
+div#purnkleenGiveawayFeature {
+    height: 20vh;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+
+    background: url("../img/Archimedes.jpg") no-repeat fixed center;
+    background-size: cover;
+}
+
 div#purnkleenOpsContainer {
     width: 100%;
     margin-top: 10vh;
@@ -252,20 +263,20 @@ a.opslink:hover, a.opslink:active, a.opslink:focus, a.opslink:active:focus {
         background-position: center center;
         background-size: 100% auto;
     }
-    div#purnkleenTeamFeature {
-        background-image: url("../img/olisar.jpg");
-        height: 40vh;
-        background-size: 100% auto;
-    }
-    div#purnkleenJobsFeature {
-        background-image: url("../img/orion_starfarers_jobs.jpg");
-        height: 40vh;
-        background-size: 100% auto;
-    }
     div#purnkleenAboutFeature {
-        background-image: url("../img/LandedConny.jpg");
         height: 40vh;
-        background-size: 100% auto;
+    }
+    div#purnkleenSolutionsFeature {
+        height: 40vh;
+    }
+    div#purnkleenServicesFeature {
+        height: 40vh;
+    }
+    div#purnkleenKnowledgeFeature {
+        height: 40vh;
+    }
+    div#purnkleenGiveawayFeature {
+        height: 40vh;
     }
     .motto {
         padding-top: 30vh;
