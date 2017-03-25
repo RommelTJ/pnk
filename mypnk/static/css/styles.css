@@ -102,12 +102,12 @@ a#order {
 
 /* Buttons */
 .purnkleen-red-btn {
-    background-color: #ED173A;
+    background-color: #C9302C;
     color: #EAF1F1;
     text-transform: uppercase;
 }
 .purnkleen-red-btn:hover, .purnkleen-red-btn:active, .purnkleen-red-btn:focus, .purnkleen-red-btn:active:focus {
-    background-color: #D91434;
+    background-color: #B52D26;
     color: white;
 }
 .purnkleen-green-btn {
@@ -233,7 +233,7 @@ div#purnkleenOpsTitle {
     text-shadow: 0px 0px 10px rgba(0,0,0,0.74);
 }
 .solutions {
-    color: #ED173A;
+    color: #C9302C;
 }
 .fleet-ops {
     height: 120px;
