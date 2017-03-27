@@ -260,8 +260,8 @@ a.opslink:hover, a.opslink:active, a.opslink:focus, a.opslink:active:focus {
         background-image: url('../img/starfarer.png');
         height: 70vh;
         background-repeat: no-repeat;
-        background-position: center center;
-        background-size: 100% auto;
+        background-position: center 70%;
+        background-size: 90% auto;
     }
     div#purnkleenAboutFeature {
         height: 40vh;
@@ -279,7 +279,7 @@ a.opslink:hover, a.opslink:active, a.opslink:focus, a.opslink:active:focus {
         height: 40vh;
     }
     .motto {
-        padding-top: 30vh;
+        padding-top: 35vh;
     }
     .team-motto {
         padding-top: 20vh;
