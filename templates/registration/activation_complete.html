@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %}Account activation complete{% endblock %}
+
+{% block content %}
+
+    <div id="purnkleenAboutFeature">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-7">
+                    <div class="team-motto">Woohoo!</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1>Success!</h1>
+        <p class="lead">Account successfully activated!</p>
+        <p>You can now sign in to the website.</p>
+
+        <p><a href="{% url 'auth_login' %}"
+            class="btn btn-lg purnkleen-red-btn"
+            role="button">Sign in</a>
+        </p>
+
+        <hr class="featurette-divider">
+
+    </div>
+
+{% endblock %}

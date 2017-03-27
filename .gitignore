@@ -3,12 +3,12 @@
 *.iml
 
 # Migrations
-pnk/migrations/
+mypnk/migrations/
 staticfiles/
 *.pyc
 
 # Private Settings
-src/config/settings.ini
+config/settings.ini
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
