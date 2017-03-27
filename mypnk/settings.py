@@ -29,7 +29,7 @@ SECRET_KEY = config.get('key', 'SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['www.purnkleen.com', 'purnkleen.com', '127.0.0.1']
 
 EMAIL_HOST = config.get('email', 'EMAIL_HOST')
 EMAIL_HOST_USER = config.get('email', 'EMAIL_HOST_USER')
