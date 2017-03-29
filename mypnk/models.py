@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django.utils import timezone
+from django.utils.datetime_safe import date
 
 
 class Organization(models.Model):
@@ -26,6 +27,8 @@ class PNKEmployee(models.Model):
     user = models.ForeignKey(User)
     org = models.ManyToManyField(Organization, related_name='organizations')
     type = models.CharField(max_length=3, choices=EMPLOYEE_TYPES, default='AFF')
+    callsign = models.CharField(max_length=255)
+    birth_date = models.DateField(default=timezone.now)
     hire_date = models.DateTimeField(default=timezone.now, blank=True)
 
     def __str__(self):
