@@ -28,6 +28,7 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^accounts/', include('registration.backends.default.urls')),
     url(r'^giveaway/$', views.giveaway, name='giveaway'),
+    url(r'^employees/(?P<pk>[0-9]+)/profile/$', views.ProfileDetailView.as_view(), name='my_profile'),
 
     #########################
     # Start About Views     #

@@ -1,5 +1,6 @@
 from django.shortcuts import render
-
+from django.views.generic import TemplateView, ListView, DetailView, CreateView, UpdateView, DeleteView
+from .models import PNKEmployee, generate_next_emp_no
 
 def index(request):
     return render(request, 'index.html', {})
@@ -107,3 +108,12 @@ def links_tools(request):
 #########################
 # End Knowledge Views   #
 #########################
+
+
+class ProfileDetailView(DetailView):
+    template_name = 'profile_detail.html'
+    model = PNKEmployee
+
+    def get_context_data(self, **kwargs):
+        context = super(ProfileDetailView, self).get_context_data(**kwargs)
+        return context
