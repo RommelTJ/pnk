@@ -2,9 +2,6 @@ from django.shortcuts import render
 from django.views.generic import TemplateView, ListView, DetailView, CreateView, UpdateView, DeleteView
 from .models import PNKEmployee, generate_next_emp_no
 
-def index(request):
-    return render(request, 'index.html', {})
-
 
 def giveaway(request):
     return render(request, 'giveaway.html', {})
@@ -110,6 +107,22 @@ def links_tools(request):
 #########################
 
 
+#########################
+# Class Based Views     #
+#########################
+
+class HomePageView(TemplateView):
+    template_name = "index.html"
+
+    def get_context_data(self, **kwargs):
+        context = super(HomePageView, self).get_context_data(**kwargs)
+        context['pnk_employee'] = 'Rommel'
+        # PNKEmployee.objects.filter(emp_no__exact=self.object.emp_no)
+        # TODO: Check if user is a PNKEmployee
+        # context['latest_articles'] = Article.objects.all()[:5]
+        return context
+
+
 class ProfileDetailView(DetailView):
     template_name = 'profile_detail.html'
     model = PNKEmployee
@@ -117,3 +130,7 @@ class ProfileDetailView(DetailView):
     def get_context_data(self, **kwargs):
         context = super(ProfileDetailView, self).get_context_data(**kwargs)
         return context
+
+#########################
+# End Class Based Views #
+#########################

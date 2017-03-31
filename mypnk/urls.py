@@ -24,7 +24,7 @@ admin.site.site_title = "PNK Administation"
 admin.site.index_title = "PNK"
 
 urlpatterns = [
-    url(r'^$', views.index, name='index'),
+    url(r'^$', views.HomePageView.as_view(), name='index'),
     url(r'^admin/', admin.site.urls),
     url(r'^accounts/', include('registration.backends.default.urls')),
     url(r'^giveaway/$', views.giveaway, name='giveaway'),

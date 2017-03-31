@@ -53,14 +53,13 @@ class PNKEmployee(models.Model):
         ('F', 'Female'),
     )
 
-
     emp_no = models.IntegerField(primary_key=True)
     user = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     org = models.ManyToManyField(Organization, related_name='organizations')
     gender = models.CharField(max_length=1, choices=GENDER_CHOICES, default='M')
     type = models.CharField(max_length=3, choices=EMPLOYEE_TYPES, default='AFF')
     callsign = models.CharField(max_length=255)
-    # birth_date = models.DateField(default=datetime(1980, 01, 01), blank=True)
+    birth_date = models.DateField(default=datetime(1980, 01, 01))
     hire_date = models.DateTimeField(default=timezone.now, blank=True)
     image = StdImageField(upload_to=upload_path_handler, storage=fs, null=True, blank=True, max_length=255, variations={
         'large': (528, 750),
