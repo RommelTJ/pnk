@@ -114,13 +114,17 @@ def links_tools(request):
 class HomePageView(TemplateView):
     template_name = "index.html"
 
-    def get_context_data(self, **kwargs):
+    def get(self, request, *args, **kwargs):
         context = super(HomePageView, self).get_context_data(**kwargs)
-        context['pnk_employee'] = 'Rommel'
-        # PNKEmployee.objects.filter(emp_no__exact=self.object.emp_no)
-        # TODO: Check if user is a PNKEmployee
-        # context['latest_articles'] = Article.objects.all()[:5]
-        return context
+        if request.user.is_authenticated:
+            employee = PNKEmployee.objects.filter(user__exact=request.user).first()
+            if employee:
+                context['pnk_employee'] = employee
+            else:
+                context['pnk_employee'] = None
+        else:
+            context['pnk_employee'] = None
+        return render(request, 'index.html', context)
 
 
 class ProfileDetailView(DetailView):
