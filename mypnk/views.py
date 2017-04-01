@@ -135,6 +135,17 @@ class ProfileDetailView(DetailView):
         context = super(ProfileDetailView, self).get_context_data(**kwargs)
         return context
 
+
+class ProfileListView(ListView):
+    model = PNKEmployee
+    template_name = 'team.html'
+    paginate_by = 10
+
+    def get_queryset(self):
+        order_by_field = self.request.GET.get('order-by') or 'hire_date'
+        queryset = super(ProfileListView, self).get_queryset()
+        return queryset.order_by(order_by_field)
+
 #########################
 # End Class Based Views #
 #########################

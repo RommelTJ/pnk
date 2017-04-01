@@ -5,6 +5,16 @@
 {% block title %}Pur'N'Kleen Employees{% endblock %}
 
 {% block container %}
+    <div id="purnkleenAboutFeature">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-7">
+                    <div class="team-motto">THERE ARE DOZENS OF US<br><span class="solutions">DOZENS!</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="container">
         <h3>Profile</h3>
         <table>
@@ -14,7 +24,7 @@
             </tr>
             <tr>
                 <td>Name</td>
-                <td>{{ object.first_name }} {{ object.last_name }}</td>
+                <td>{{ object.user.first_name }} {{ object.user.last_name }}</td>
             </tr>
             <tr>
                 <td>Gender</td>
