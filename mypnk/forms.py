@@ -1,6 +1,8 @@
 from django import forms
 from django.utils import timezone
 from django.utils.safestring import mark_safe
+from registration.forms import RegistrationForm
+from registration.signals import user_registered
 
 from .models import PNKEmployee
 
@@ -17,7 +19,7 @@ class AdminImageFieldWidget(forms.widgets.FileInput):
 
 class PNKEmployeeForm(forms.ModelForm):
     hire_date = forms.DateField(widget=forms.SelectDateWidget(years=range(1980, 2025)), initial=timezone.now)
-    # birth_date = forms.DateField(widget=forms.widgets.DateInput(attrs={'type': 'date'}))
+    birth_date = forms.DateField(widget=forms.SelectDateWidget(years=range(1980, 2025)), initial=timezone.now)
     image = forms.ImageField(label='Profile Image', widget=AdminImageFieldWidget(), required=False)
 
     def __str__(self):
@@ -26,3 +28,33 @@ class PNKEmployeeForm(forms.ModelForm):
     class Meta:
         model = PNKEmployee
         fields = '__all__'
+
+
+class MyExtendedForm(RegistrationForm):
+    """
+    Extends the base registration form to include first name and last name
+    """
+    first_name = forms.CharField(
+        widget=forms.TextInput(attrs={'placeholder': 'Chris'}),
+        required=True,
+        label='First name'
+    )
+    last_name = forms.CharField(
+        widget=forms.TextInput(attrs={'placeholder': 'Roberts'}),
+        required=True,
+        label='Last name'
+    )
+
+
+def user_created(sender, user, request, **kwargs):
+    """
+    Called via signals when user registers. Creates different profiles and
+    associations
+    """
+    form = MyExtendedForm(request.POST)
+    user.first_name = form.data['first_name']
+    user.last_name = form.data['last_name']
+    user.save()
+
+
+user_registered.connect(user_created)

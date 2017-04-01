@@ -17,6 +17,9 @@ from django.conf.urls import url, include
 from django.conf.urls.static import static
 from django.conf import settings
 from django.contrib import admin
+from registration.backends.default.views import RegistrationView
+
+from mypnk.forms import MyExtendedForm
 from . import views
 
 admin.site.site_header = "Pur'N'Kleen"
@@ -26,6 +29,7 @@ admin.site.index_title = "PNK"
 urlpatterns = [
     url(r'^$', views.HomePageView.as_view(), name='index'),
     url(r'^admin/', admin.site.urls),
+    url(r'accounts/register/$', RegistrationView.as_view(form_class=MyExtendedForm), name='registration_register'),
     url(r'^accounts/', include('registration.backends.default.urls')),
     url(r'^giveaway/$', views.giveaway, name='giveaway'),
     url(r'^employees/(?P<pk>[0-9]+)/profile/$', views.ProfileDetailView.as_view(), name='my_profile'),
