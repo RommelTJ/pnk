@@ -29,7 +29,7 @@ SECRET_KEY = config.get('key', 'SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['www.purnkleen.com', 'purnkleen.com', '127.0.0.1']
+ALLOWED_HOSTS = ['www.purnkleen.com', 'purnkleen.com', '127.0.0.1', 'localhost']
 
 EMAIL_HOST = config.get('email', 'EMAIL_HOST')
 EMAIL_HOST_USER = config.get('email', 'EMAIL_HOST_USER')
@@ -137,6 +137,8 @@ USE_TZ = True
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'images')
+MEDIA_URL = '/images/'
 
 # Django Registration settings
 

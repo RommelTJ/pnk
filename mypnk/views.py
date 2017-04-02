@@ -1,8 +1,6 @@
 from django.shortcuts import render
-
-
-def index(request):
-    return render(request, 'index.html', {})
+from django.views.generic import TemplateView, ListView, DetailView, CreateView, UpdateView, DeleteView
+from .models import PNKEmployee, generate_next_emp_no
 
 
 def giveaway(request):
@@ -106,4 +104,48 @@ def links_tools(request):
     return render(request, 'links-and-tools.html', {})
 #########################
 # End Knowledge Views   #
+#########################
+
+
+#########################
+# Class Based Views     #
+#########################
+
+class HomePageView(TemplateView):
+    template_name = "index.html"
+
+    def get(self, request, *args, **kwargs):
+        context = super(HomePageView, self).get_context_data(**kwargs)
+        if request.user.is_authenticated:
+            employee = PNKEmployee.objects.filter(user__exact=request.user).first()
+            if employee:
+                context['pnk_employee'] = employee
+            else:
+                context['pnk_employee'] = None
+        else:
+            context['pnk_employee'] = None
+        return render(request, 'index.html', context)
+
+
+class ProfileDetailView(DetailView):
+    template_name = 'profile_detail.html'
+    model = PNKEmployee
+
+    def get_context_data(self, **kwargs):
+        context = super(ProfileDetailView, self).get_context_data(**kwargs)
+        return context
+
+
+class ProfileListView(ListView):
+    model = PNKEmployee
+    template_name = 'team.html'
+    paginate_by = 10
+
+    def get_queryset(self):
+        order_by_field = self.request.GET.get('order-by') or 'hire_date'
+        queryset = super(ProfileListView, self).get_queryset()
+        return queryset.order_by(order_by_field)
+
+#########################
+# End Class Based Views #
 #########################

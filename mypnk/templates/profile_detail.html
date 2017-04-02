@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}Pur'N'Kleen Employees{% endblock %}
+
+{% block container %}
+    <div id="purnkleenAboutFeature">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-7">
+                    <div class="team-motto">THERE ARE DOZENS OF US<br><span class="solutions">DOZENS!</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h3>Profile</h3>
+        <table>
+            <tr>
+                <td width="50%"><strong>Emp No</strong></td>
+                <td width="50%"><strong>{{ object.emp_no }}</strong></td>
+            </tr>
+            <tr>
+                <td>Name</td>
+                <td>{{ object.user.first_name }} {{ object.user.last_name }}</td>
+            </tr>
+            <tr>
+                <td>Gender</td>
+                <td>{{ object.gender }}</td>
+            </tr>
+        </table>
+    </div>
+{% endblock %}

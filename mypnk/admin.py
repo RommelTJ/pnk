@@ -1,4 +1,6 @@
 from django.contrib import admin
+from django.utils.safestring import mark_safe
+
 from .models import Organization, PNKEmployee
 from .forms import PNKEmployeeForm
 
@@ -22,12 +24,19 @@ class TypeFilter(admin.SimpleListFilter):
 
 class PNKEmployeeAdmin(admin.ModelAdmin):
     form = PNKEmployeeForm
-    search_fields = ('user',)
-    list_display = ('user', 'first_name', 'last_name', 'organizations', 'type', 'hire_date')
+    search_fields = ('emp_no', 'first_name', 'last_name', 'hire_date', 'gender',)
+    list_display = ('image_thumbnail', 'emp_no', 'first_name', 'last_name', 'organizations', 'type', 'hire_date', 'gender')
+    list_display_links = ('emp_no',)
     list_filter = ('hire_date', TypeFilter,)
     save_on_top = True
     actions_on_bottom = False
     list_per_page = 10
+    placeholder = '/images/profile/placeholder.thumbnail.png'
+
+    def image_thumbnail(self, obj):
+        return mark_safe('<img src="%s" />' % (obj.image.thumbnail.url if obj.image else self.placeholder))
+
+    image_thumbnail.short_description = 'Profile Image'
 
     def first_name(self, obj):
         return obj.user.first_name
