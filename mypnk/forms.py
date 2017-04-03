@@ -8,7 +8,7 @@ from .models import PNKEmployee
 
 
 class AdminImageFieldWidget(forms.widgets.FileInput):
-    def __init__(self, placeholder='/images/profile/placeholder.thumbnail.png'):
+    def __init__(self, placeholder='/media/profile/placeholder.thumbnail.png'):
         self.placeholder = placeholder
         super(AdminImageFieldWidget, self).__init__({})
 

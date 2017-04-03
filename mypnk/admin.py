@@ -31,7 +31,7 @@ class PNKEmployeeAdmin(admin.ModelAdmin):
     save_on_top = True
     actions_on_bottom = False
     list_per_page = 10
-    placeholder = '/images/profile/placeholder.thumbnail.png'
+    placeholder = '/media/profile/placeholder.thumbnail.png'
 
     def image_thumbnail(self, obj):
         return mark_safe('<img src="%s" />' % (obj.image.thumbnail.url if obj.image else self.placeholder))
