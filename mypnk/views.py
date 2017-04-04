@@ -72,22 +72,6 @@ def maintenance_repair(request):
 
 def transportation(request):
     return render(request, 'transportation.html', {})
-
-
-def implementation(request):
-    return render(request, 'implementation.html', {})
-
-
-def support_training(request):
-    return render(request, 'support-and-training.html', {})
-
-
-def consulting_services(request):
-    return render(request, 'consulting-services.html', {})
-
-
-def professional_services(request):
-    return render(request, 'professional-services.html', {})
 #########################
 # End Services Views    #
 #########################

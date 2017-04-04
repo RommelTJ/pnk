@@ -64,10 +64,6 @@ urlpatterns = [
     url(r'^fuel-services/$', views.fuel_services, name='fuel-services'),
     url(r'^maintenance-and-repair/$', views.maintenance_repair, name='maintenance-and-repair'),
     url(r'^transportation/$', views.transportation, name='transportation'),
-    url(r'^implementation/$', views.implementation, name='implementation'),
-    url(r'^support-and-training/$', views.support_training, name='support-and-training'),
-    url(r'^consulting-services/$', views.consulting_services, name='consulting-services'),
-    url(r'^professional-services/$', views.professional_services, name='professional-services'),
     #########################
     # End Services Views    #
     #########################
