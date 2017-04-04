@@ -34,10 +34,6 @@ def bylaws(request):
     return render(request, 'bylaws.html', {})
 
 
-def partners(request):
-    return render(request, 'partners.html', {})
-
-
 def join_pnk(request):
     return render(request, 'join-pnk.html', {})
 #########################
