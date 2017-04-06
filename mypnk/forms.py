@@ -1,12 +1,11 @@
 from django import forms
-from django.utils import timezone
 from django.utils.datetime_safe import datetime
 from django.utils.safestring import mark_safe
+from django_countries.widgets import CountrySelectWidget
 from registration.forms import RegistrationForm
 from registration.signals import user_registered
-from django_countries.widgets import CountrySelectWidget
 
-from .models import PNKEmployee, generate_next_emp_no, Organization
+from .models import PNKEmployee
 
 
 class AdminImageFieldWidget(forms.widgets.FileInput):
@@ -28,7 +27,17 @@ class PNKEmployeeForm(forms.ModelForm):
 
     class Meta:
         model = PNKEmployee
-        fields = ('callsign', 'rsi_url', 'org', 'country', 'gender', 'birth_date', 'image')
+        fields = (
+            'callsign',
+            'rsi_url',
+            'org',
+            'primary_activity',
+            'secondary_activity',
+            'country',
+            'gender',
+            'birth_date',
+            'image'
+        )
         widgets = {'country': CountrySelectWidget()}
 
 

@@ -58,6 +58,74 @@
                                         {% endif %}
                                     </span>
                                 </div>
+                                <div class="primary_activity">
+                                    <span class="category">Primary Activity:</span>
+                                    <span>
+                                        {% if employee.primary_activity == 'HUN' %}
+                                            Bounty Hunting
+                                        {% elif employee.primary_activity == 'ENG' %}
+                                            Engineering
+                                        {% elif employee.primary_activity == 'EXP' %}
+                                            Exploration
+                                        {% elif employee.primary_activity == 'FRE' %}
+                                            Freelancing
+                                        {% elif employee.primary_activity == 'INF' %}
+                                            Infiltration
+                                        {% elif employee.primary_activity == 'PIR' %}
+                                            Piracy
+                                        {% elif employee.primary_activity == 'RES' %}
+                                            Resources
+                                        {% elif employee.primary_activity == 'SCO' %}
+                                            Scouting
+                                        {% elif employee.primary_activity == 'SEC' %}
+                                            Security
+                                        {% elif employee.primary_activity == 'SMU' %}
+                                            Smuggling
+                                        {% elif employee.primary_activity == 'SOC' %}
+                                            Social
+                                        {% elif employee.primary_activity == 'TRD' %}
+                                            Trading
+                                        {% elif employee.primary_activity == 'TRN' %}
+                                            Transport
+                                        {% else %}
+                                            N/A
+                                        {% endif %}
+                                    </span>
+                                </div>
+                                <div class="secondary_activity">
+                                    <span class="category">Secondary Activity:</span>
+                                    <span>
+                                        {% if employee.secondary_activity == 'HUN' %}
+                                            Bounty Hunting
+                                        {% elif employee.secondary_activity == 'ENG' %}
+                                            Engineering
+                                        {% elif employee.secondary_activity == 'EXP' %}
+                                            Exploration
+                                        {% elif employee.secondary_activity == 'FRE' %}
+                                            Freelancing
+                                        {% elif employee.secondary_activity == 'INF' %}
+                                            Infiltration
+                                        {% elif employee.secondary_activity == 'PIR' %}
+                                            Piracy
+                                        {% elif employee.secondary_activity == 'RES' %}
+                                            Resources
+                                        {% elif employee.secondary_activity == 'SCO' %}
+                                            Scouting
+                                        {% elif employee.secondary_activity == 'SEC' %}
+                                            Security
+                                        {% elif employee.secondary_activity == 'SMU' %}
+                                            Smuggling
+                                        {% elif employee.secondary_activity == 'SOC' %}
+                                            Social
+                                        {% elif employee.secondary_activity == 'TRD' %}
+                                            Trading
+                                        {% elif employee.secondary_activity == 'TRN' %}
+                                            Transport
+                                        {% else %}
+                                            N/A
+                                        {% endif %}
+                                    </span>
+                                </div>
                                 <div class="date">
                                     <span class="category">Hire Date:</span>
                                     <span>{{ employee.hire_date|date:"d M Y" }}</span>
