@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'mypnk',
     'bootstrap3',
+    'django_countries',
 ]
 
 MIDDLEWARE = [

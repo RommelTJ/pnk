@@ -7,6 +7,7 @@ from django.core.files.storage import FileSystemStorage
 from django.utils.datetime_safe import datetime
 from stdimage import StdImageField
 from django.conf import settings
+from django_countries.fields import CountryField
 
 
 class LocalFileSystemStorage(FileSystemStorage):
@@ -67,6 +68,7 @@ class PNKEmployee(models.Model):
         'thumbnail': (88,125, True),
         'medium': (264, 375),
     })
+    country = CountryField(blank_label='(select country)')
 
     def __str__(self):
         return "%s %s" % (self.user.first_name, self.user.last_name)

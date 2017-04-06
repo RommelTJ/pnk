@@ -33,7 +33,10 @@
                             </a>
                         </div>
                         <div class="player_info">
-                            <div class="player_name">{{ employee.user.first_name }} {{ employee.user.last_name }}</div>
+                            <div class="player_name">
+                                <i class="flag2x {{ employee.country.flag_css }}"></i>
+                                {{ employee.user.first_name }} {{ employee.user.last_name }}
+                            </div>
                             <div class="player_stats">
                                 <div class="handle">
                                     <span class="category">Callsign:</span>
