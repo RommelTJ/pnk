@@ -127,6 +127,10 @@ a#order {
 .purnkleen-black-btn:hover, .purnkleen-black-btn:active, .purnkleen-black-btn:focus, .purnkleen-black-btn:active:focus {
     color: white;
 }
+.purnkleen-join-btn {
+    width: 300px;
+    margin: 30px 0;
+}
 
 /*Big Feature*/
 /*purnkleenTeamFeature*/
