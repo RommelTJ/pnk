@@ -43,7 +43,8 @@ urlpatterns = [
     url(r'^team/$', views.ProfileListView.as_view(), name='team'),
     url(r'^benefits/$', views.benefits, name='benefits'),
     url(r'^bylaws/$', views.bylaws, name='bylaws'),
-    url(r'^join-pnk/$', views.join_pnk, name='join-pnk'),
+    url(r'^join/$', views.join, name='join'),
+    url(r'^employees/profile/create/$', views.PNKProfileCreateView.as_view(), name='pnk_profile_create'),
     #########################
     # End About Views       #
     #########################

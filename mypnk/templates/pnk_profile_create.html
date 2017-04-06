@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load bootstrap3 %}
+
+{% load static %}
+
+{% block title %}Pur'N'Kleen Employees{% endblock %}
+
+{% block container %}
+    <div id="purnkleenAboutFeature">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-7">
+                    <div class="team-motto">THERE ARE DOZENS OF US<br><span class="solutions">DOZENS!</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+
+        {% if pnk_employee %}
+            <div class="col-md-12">
+                <h1 class="featurette-heading">You are already signed up</h1>
+                <p class="lead">We appreciate the enthusiasm, but you can't sign up twice...</p>
+                <div class="btn-group">
+                    <a class="btn btn-lg purnkleen-yellow-btn" href="{% url 'index' %}">Home</a>
+                </div>
+            </div>
+        {% else %}
+            <form action="{% url 'pnk_profile_create' %}" method="post" role="form" class="form-horizontal">
+                {% csrf_token %}
+                {% bootstrap_form form layout='horizontal' %}
+
+                {% buttons %}
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button type="submit" class="btn btn-lg purnkleen-red-btn">
+                            {% bootstrap_icon "star" %} Sign Me Up!
+                        </button>
+                    </div>
+                {% endbuttons %}
+            </form>
+        {% endif %}
+
+    </div>
+{% endblock %}
