@@ -4,7 +4,7 @@ from django.urls import reverse_lazy
 from django.views.generic import TemplateView, ListView, DetailView, CreateView
 
 from .forms import PNKEmployeeForm
-from .models import PNKEmployee, generate_next_emp_no, Organization
+from .models import PNKEmployee, generate_next_emp_no
 
 
 def giveaway(request):
