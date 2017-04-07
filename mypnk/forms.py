@@ -5,8 +5,7 @@ from django_countries.widgets import CountrySelectWidget
 from registration.forms import RegistrationForm
 from registration.signals import user_registered
 
-from mypnk import settings
-from .models import PNKEmployee, Organization
+from .models import PNKEmployee
 
 
 class AdminImageFieldWidget(forms.widgets.FileInput):
