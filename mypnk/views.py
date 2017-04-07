@@ -119,11 +119,7 @@ class PNKProfileCreateView(CreateView):
     def get(self, request, *args, **kwargs):
         context = self.get_context_data()
         if context.get('pnk_employee') is None:
-            form = PNKEmployeeForm(
-                initial={
-                    'organizations': Organization.objects.all(),
-                }
-            )
+            form = PNKEmployeeForm()
             return render(request, self.get_template_name(), {'form': form})
         return render(request, self.get_template_name(), context)
 
