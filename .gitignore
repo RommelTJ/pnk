@@ -7,6 +7,7 @@ mypnk/migrations/
 staticfiles/
 *.pyc
 images/
+media/
 
 # Private Settings
 config/settings.ini
