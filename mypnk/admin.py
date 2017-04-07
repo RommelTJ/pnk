@@ -45,7 +45,7 @@ class PNKEmployeeAdmin(admin.ModelAdmin):
         return obj.user.last_name
 
     def organizations(self, obj):
-        return ", ".join([a.short_name for a in obj.org.all()])
+        return ", ".join([a.short_name for a in obj.orgs.all()])
 
 
 admin.site.register(Organization)
