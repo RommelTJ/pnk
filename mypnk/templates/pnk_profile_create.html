@@ -27,7 +27,7 @@
                 </div>
             </div>
         {% else %}
-            <form action="{% url 'pnk_profile_create' %}" method="post" role="form" class="form-horizontal">
+            <form enctype="multipart/form-data" action="{% url 'pnk_profile_create' %}" method="post" role="form" class="form-horizontal">
                 {% csrf_token %}
                 {% bootstrap_form form layout='horizontal' %}
 

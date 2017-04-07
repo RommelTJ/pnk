@@ -124,7 +124,7 @@ class PNKProfileCreateView(CreateView):
         return render(request, self.get_template_name(), context)
 
     def post(self, request, *args, **kwargs):
-        form = PNKEmployeeForm(request.POST)
+        form = PNKEmployeeForm(request.POST, request.FILES)
         if form.is_valid():
             self.object = form.save(commit=False)
             self.object.emp_no = generate_next_emp_no()
