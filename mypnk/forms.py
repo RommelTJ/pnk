@@ -5,7 +5,8 @@ from django_countries.widgets import CountrySelectWidget
 from registration.forms import RegistrationForm
 from registration.signals import user_registered
 
-from .models import PNKEmployee
+from mypnk import settings
+from .models import PNKEmployee, Organization
 
 
 class AdminImageFieldWidget(forms.widgets.FileInput):
@@ -19,6 +20,11 @@ class AdminImageFieldWidget(forms.widgets.FileInput):
 
 
 class PNKEmployeeForm(forms.ModelForm):
+    callsign = forms.CharField(widget=forms.TextInput(attrs={'placeholder': 'RedOne'}))
+    rsi_url = forms.URLField(
+        widget=forms.URLInput(attrs={'placeholder': 'https://robertsspaceindustries.com/citizens/croberts68'}),
+        label="RSI URL"
+    )
     birth_date = forms.DateField(widget=forms.SelectDateWidget(years=range(1950, 2025)), initial=datetime(1988, 01, 01))
     image = forms.ImageField(label='Profile Image', widget=AdminImageFieldWidget(), required=False)
 
@@ -30,7 +36,7 @@ class PNKEmployeeForm(forms.ModelForm):
         fields = (
             'callsign',
             'rsi_url',
-            'org',
+            'orgs',
             'primary_activity',
             'secondary_activity',
             'country',

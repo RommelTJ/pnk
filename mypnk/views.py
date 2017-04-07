@@ -1,8 +1,10 @@
+from django.http import HttpResponseRedirect
 from django.shortcuts import render
 from django.urls import reverse_lazy
-from django.views.generic import TemplateView, ListView, DetailView, CreateView, UpdateView, DeleteView
-from .models import PNKEmployee, generate_next_emp_no, Organization
+from django.views.generic import TemplateView, ListView, DetailView, CreateView
+
 from .forms import PNKEmployeeForm
+from .models import PNKEmployee, generate_next_emp_no, Organization
 
 
 def giveaway(request):
@@ -117,17 +119,24 @@ class PNKProfileCreateView(CreateView):
     def get(self, request, *args, **kwargs):
         context = self.get_context_data()
         if context.get('pnk_employee') is None:
-            form = PNKEmployeeForm()
+            form = PNKEmployeeForm(
+                initial={
+                    'organizations': Organization.objects.all(),
+                }
+            )
             return render(request, self.get_template_name(), {'form': form})
         return render(request, self.get_template_name(), context)
 
-    def form_valid(self, form):
-        self.object = form.save(commit=False)
-        self.object.emp_no = generate_next_emp_no()
-        self.object.user = self.request.user
-        self.object.type = 'AFF'
-        self.object.save()
-        return super(PNKProfileCreateView, self).form_valid(form)
+    def post(self, request, *args, **kwargs):
+        form = PNKEmployeeForm(request.POST)
+        if form.is_valid():
+            self.object = form.save(commit=False)
+            self.object.emp_no = generate_next_emp_no()
+            self.object.user = self.request.user
+            self.object.type = 'AFF'
+            self.object.save()
+            return HttpResponseRedirect('/team/')
+        return render(request, self.template_name, {'form': form})
 
     def get_template_name(self):
         return self.template_name
