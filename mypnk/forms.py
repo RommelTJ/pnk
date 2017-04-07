@@ -41,7 +41,7 @@ class PNKEmployeeForm(forms.ModelForm):
             'country',
             'gender',
             'birth_date',
-            'image'
+            'image',
         )
         widgets = {'country': CountrySelectWidget()}
 
