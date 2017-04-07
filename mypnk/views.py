@@ -1,5 +1,9 @@
+from django.http import HttpResponseRedirect
 from django.shortcuts import render
-from django.views.generic import TemplateView, ListView, DetailView, CreateView, UpdateView, DeleteView
+from django.urls import reverse_lazy
+from django.views.generic import TemplateView, ListView, DetailView, CreateView
+
+from .forms import PNKEmployeeForm
 from .models import PNKEmployee, generate_next_emp_no
 
 
@@ -34,12 +38,8 @@ def bylaws(request):
     return render(request, 'bylaws.html', {})
 
 
-def partners(request):
-    return render(request, 'partners.html', {})
-
-
-def join_pnk(request):
-    return render(request, 'join-pnk.html', {})
+def join(request):
+    return render(request, 'join.html', {})
 #########################
 # End About Views       #
 #########################
@@ -72,22 +72,6 @@ def maintenance_repair(request):
 
 def transportation(request):
     return render(request, 'transportation.html', {})
-
-
-def implementation(request):
-    return render(request, 'implementation.html', {})
-
-
-def support_training(request):
-    return render(request, 'support-and-training.html', {})
-
-
-def consulting_services(request):
-    return render(request, 'consulting-services.html', {})
-
-
-def professional_services(request):
-    return render(request, 'professional-services.html', {})
 #########################
 # End Services Views    #
 #########################
@@ -125,6 +109,41 @@ class HomePageView(TemplateView):
         else:
             context['pnk_employee'] = None
         return render(request, 'index.html', context)
+
+
+class PNKProfileCreateView(CreateView):
+    template_name = 'pnk_profile_create.html'
+    form_class = PNKEmployeeForm
+    success_url = reverse_lazy('team')
+
+    def get(self, request, *args, **kwargs):
+        context = self.get_context_data()
+        if context.get('pnk_employee') is None:
+            form = PNKEmployeeForm()
+            return render(request, self.get_template_name(), {'form': form})
+        return render(request, self.get_template_name(), context)
+
+    def post(self, request, *args, **kwargs):
+        form = PNKEmployeeForm(request.POST, request.FILES)
+        if form.is_valid():
+            self.object = form.save(commit=False)
+            self.object.emp_no = generate_next_emp_no()
+            self.object.user = self.request.user
+            self.object.type = 'AFF'
+            self.object.save()
+            return HttpResponseRedirect('/team/')
+        return render(request, self.template_name, {'form': form})
+
+    def get_template_name(self):
+        return self.template_name
+
+    def get_context_data(self):
+        return {
+            'pnk_employee': self.get_employee(),
+        }
+
+    def get_employee(self):
+        return PNKEmployee.objects.filter(user__exact=self.request.user).first()
 
 
 class ProfileDetailView(DetailView):

@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}Pur'N'Kleen | Join Us{% endblock %}
+
+{% block container %}
+
+    <div id="purnkleenAboutFeature">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-7">
+                    <div class="jobs-motto">Welcome to Pur'N'Kleen<br/><span class="solutions">Hope you enjoy your stay</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container purnkleen-marketing">
+
+        {% if user.is_authenticated %}
+            <div class="row">
+                <div class="col-md-12">
+                    <h1 class="featurette-heading">How to join Pur'N'Kleen in 3 easy steps!</h1>
+                    <br/>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="featurette-heading">1) Submit an application in our RSI page</h2>
+                    <div class="btn-group">
+                        <a class="btn btn-lg purnkleen-green-btn purnkleen-join-btn" href="https://robertsspaceindustries.com/orgs/PNK" target="_blank">PNK RSI Profile</a>
+                    </div>
+                </div>
+
+                <div class="col-md-12">
+                    <h2 class="featurette-heading">2) Submit an application in our website</h2>
+                    <div class="btn-group">
+                        <a class="btn btn-lg purnkleen-green-btn purnkleen-join-btn" href="{% url 'pnk_profile_create' %}" target="_blank">Create your PNK Profile</a>
+                    </div>
+                </div>
+
+                <div class="col-md-12">
+                    <h2 class="featurette-heading">3) That's it.</h2>
+                    <br/>
+                    <p class="lead">Swear on your life you'll be cool.</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <h1 class="featurette-heading">Fine Print</h1>
+                    <p>
+                        Everyone at PNK starts out as an affiliate. Affiliates are paid by the job. While we listen to
+                        affiliate feedback, affiliates do not have member rights. This means they don't get a vote on
+                        how PNK is run, how dividends are distributed, nor are they responsible for any losses that PNK
+                        might incur. For more details on our cooperative structure, you can read our
+                        <a href="{% url 'bylaws' %}">bylaws</a>.
+                    </p>
+                    <p>
+                        Existing members can nominate affiliates to become full Member-owners as long as they meet all
+                        requirements. The requirements for becoming a PNK Member-Owner and the process for accepting a
+                        new member is specified in the <a href="{% url 'bylaws' %}">bylaws</a> under Article II.
+                    </p>
+                    <p>Still not sure? <a href="https://discord.gg/QADycb2">Contact us on Discord.</a></p>
+                </div>
+            </div>
+        {% else %}
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="featurette-heading">You are not signed in</h2>
+                    <p>
+                        First step is to register for an account on this website.
+                        Click here to <a href="{% url 'registration_register' %}">register</a>.
+                        <br/>
+                        Already have an account? Click here to <a href="{% url 'auth_login' %}">sign in</a>.
+                    </p>
+                </div>
+            </div>
+        {% endif %}
+
+
+    </div>
+
+{% endblock %}

@@ -33,7 +33,10 @@
                             </a>
                         </div>
                         <div class="player_info">
-                            <div class="player_name">{{ employee.user.first_name }} {{ employee.user.last_name }}</div>
+                            <div class="player_name">
+                                <i class="flag2x {{ employee.country.flag_css }}"></i>
+                                {{ employee.user.first_name }} {{ employee.user.last_name }}
+                            </div>
                             <div class="player_stats">
                                 <div class="handle">
                                     <span class="category">Callsign:</span>
@@ -55,6 +58,74 @@
                                         {% endif %}
                                     </span>
                                 </div>
+                                <div class="primary_activity">
+                                    <span class="category">Primary Activity:</span>
+                                    <span>
+                                        {% if employee.primary_activity == 'HUN' %}
+                                            Bounty Hunting
+                                        {% elif employee.primary_activity == 'ENG' %}
+                                            Engineering
+                                        {% elif employee.primary_activity == 'EXP' %}
+                                            Exploration
+                                        {% elif employee.primary_activity == 'FRE' %}
+                                            Freelancing
+                                        {% elif employee.primary_activity == 'INF' %}
+                                            Infiltration
+                                        {% elif employee.primary_activity == 'PIR' %}
+                                            Piracy
+                                        {% elif employee.primary_activity == 'RES' %}
+                                            Resources
+                                        {% elif employee.primary_activity == 'SCO' %}
+                                            Scouting
+                                        {% elif employee.primary_activity == 'SEC' %}
+                                            Security
+                                        {% elif employee.primary_activity == 'SMU' %}
+                                            Smuggling
+                                        {% elif employee.primary_activity == 'SOC' %}
+                                            Social
+                                        {% elif employee.primary_activity == 'TRD' %}
+                                            Trading
+                                        {% elif employee.primary_activity == 'TRN' %}
+                                            Transport
+                                        {% else %}
+                                            N/A
+                                        {% endif %}
+                                    </span>
+                                </div>
+                                <div class="secondary_activity">
+                                    <span class="category">Secondary Activity:</span>
+                                    <span>
+                                        {% if employee.secondary_activity == 'HUN' %}
+                                            Bounty Hunting
+                                        {% elif employee.secondary_activity == 'ENG' %}
+                                            Engineering
+                                        {% elif employee.secondary_activity == 'EXP' %}
+                                            Exploration
+                                        {% elif employee.secondary_activity == 'FRE' %}
+                                            Freelancing
+                                        {% elif employee.secondary_activity == 'INF' %}
+                                            Infiltration
+                                        {% elif employee.secondary_activity == 'PIR' %}
+                                            Piracy
+                                        {% elif employee.secondary_activity == 'RES' %}
+                                            Resources
+                                        {% elif employee.secondary_activity == 'SCO' %}
+                                            Scouting
+                                        {% elif employee.secondary_activity == 'SEC' %}
+                                            Security
+                                        {% elif employee.secondary_activity == 'SMU' %}
+                                            Smuggling
+                                        {% elif employee.secondary_activity == 'SOC' %}
+                                            Social
+                                        {% elif employee.secondary_activity == 'TRD' %}
+                                            Trading
+                                        {% elif employee.secondary_activity == 'TRN' %}
+                                            Transport
+                                        {% else %}
+                                            N/A
+                                        {% endif %}
+                                    </span>
+                                </div>
                                 <div class="date">
                                     <span class="category">Hire Date:</span>
                                     <span>{{ employee.hire_date|date:"d M Y" }}</span>
@@ -65,6 +136,24 @@
                 {% endfor %}
             </ul>
         </div>
+
+        {% if is_paginated %}
+            <ul class="pagination center-align">
+                {% if page_obj.has_previous %}
+                    <li class="waves-effect">
+                        <a href="?page={{ page_obj.previous_page_number }}">Previous</a>
+                    </li>
+                {% endif %}
+                <li class="waves-effect">
+                    <span>Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}</span>
+                </li>
+                {% if page_obj.has_next %}
+                    <li class="waves-effect">
+                        <a href="?page={{ page_obj.next_page_number }}">Next</a>
+                    </li>
+                {% endif %}
+            </ul>
+        {% endif %}
     </div>
 
 </div>

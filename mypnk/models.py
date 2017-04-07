@@ -7,6 +7,7 @@ from django.core.files.storage import FileSystemStorage
 from django.utils.datetime_safe import datetime
 from stdimage import StdImageField
 from django.conf import settings
+from django_countries.fields import CountryField
 
 
 class LocalFileSystemStorage(FileSystemStorage):
@@ -53,9 +54,25 @@ class PNKEmployee(models.Model):
         ('F', 'Female'),
     )
 
+    ACTIVITY_CHOICES = (
+        ('HUN', 'Bounty Hunting'),
+        ('ENG', 'Engineering'),
+        ('EXP', 'Exploration'),
+        ('FRE', 'Freelancing'),
+        ('INF', 'Infiltration'),
+        ('PIR', 'Piracy'),
+        ('RES', 'Resources'),
+        ('SCO', 'Scouting'),
+        ('SEC', 'Security'),
+        ('SMU', 'Smuggling'),
+        ('SOC', 'Social'),
+        ('TRD', 'Trading'),
+        ('TRN', 'Transport'),
+    )
+
     emp_no = models.IntegerField(primary_key=True)
     user = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
-    org = models.ManyToManyField(Organization, related_name='organizations')
+    orgs = models.ManyToManyField(Organization, related_name='organizations')
     gender = models.CharField(max_length=1, choices=GENDER_CHOICES, default='M')
     type = models.CharField(max_length=3, choices=EMPLOYEE_TYPES, default='AFF')
     callsign = models.CharField(max_length=255)
@@ -67,6 +84,9 @@ class PNKEmployee(models.Model):
         'thumbnail': (88,125, True),
         'medium': (264, 375),
     })
+    country = CountryField(blank_label='(select country)')
+    primary_activity = models.CharField(max_length=3, choices=ACTIVITY_CHOICES, default='RES')
+    secondary_activity = models.CharField(max_length=3, choices=ACTIVITY_CHOICES, default='TRD')
 
     def __str__(self):
         return "%s %s" % (self.user.first_name, self.user.last_name)

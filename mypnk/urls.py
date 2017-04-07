@@ -43,8 +43,8 @@ urlpatterns = [
     url(r'^team/$', views.ProfileListView.as_view(), name='team'),
     url(r'^benefits/$', views.benefits, name='benefits'),
     url(r'^bylaws/$', views.bylaws, name='bylaws'),
-    url(r'^partners/$', views.partners, name='partners'),
-    url(r'^join-pnk/$', views.join_pnk, name='join-pnk'),
+    url(r'^join/$', views.join, name='join'),
+    url(r'^employees/profile/create/$', views.PNKProfileCreateView.as_view(), name='pnk_profile_create'),
     #########################
     # End About Views       #
     #########################
@@ -64,10 +64,6 @@ urlpatterns = [
     url(r'^fuel-services/$', views.fuel_services, name='fuel-services'),
     url(r'^maintenance-and-repair/$', views.maintenance_repair, name='maintenance-and-repair'),
     url(r'^transportation/$', views.transportation, name='transportation'),
-    url(r'^implementation/$', views.implementation, name='implementation'),
-    url(r'^support-and-training/$', views.support_training, name='support-and-training'),
-    url(r'^consulting-services/$', views.consulting_services, name='consulting-services'),
-    url(r'^professional-services/$', views.professional_services, name='professional-services'),
     #########################
     # End Services Views    #
     #########################

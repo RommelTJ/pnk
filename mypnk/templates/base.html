@@ -22,6 +22,9 @@
     <!-- Custom styles for this template -->
     <link href="{% static 'css/styles.css' %}" rel="stylesheet">
 
+    <!-- Country Flags -->
+    <link rel="stylesheet" href="{% static 'flags/sprite-hq.css' %}">
+
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -48,15 +51,13 @@
                 <li class="dropdown">
                     <a href="{% url 'about' %}">About Us</a>
                     <ul class="dropdown-menu">
-                        <li><a href="{% url 'about' %}">Our Story</a></li>
                         <li><a href="{% url 'vision' %}">Vision Statement</a></li>
                         <li><a href="{% url 'values' %}">Fundamental Values</a></li>
                         <li><a href="{% url 'team' %}">Meet Our Team</a></li>
                         <li><a href="{% url 'benefits' %}">Benefits</a></li>
                         <li><a href="{% url 'bylaws' %}">Bylaws</a></li>
-                        <li><a href="{% url 'partners' %}">Partners</a></li>
                         <li role="separator" class="divider"></li>
-                        <li><a href="{% url 'join-pnk' %}">Join Us</a></li>
+                        <li><a href="{% url 'join' %}">Join Us</a></li>
                     </ul>
                 </li>
 
@@ -74,10 +75,6 @@
                         <li><a href="{% url 'fuel-services' %}">Fuel Services</a></li>
                         <li><a href="{% url 'maintenance-and-repair' %}">Maintenance and Repair</a></li>
                         <li><a href="{% url 'transportation' %}">Transportation</a></li>
-                        <li><a href="{% url 'implementation' %}">Implementation</a></li>
-                        <li><a href="{% url 'support-and-training' %}">Support and Training</a></li>
-                        <li><a href="{% url 'consulting-services' %}">Consulting Services</a></li>
-                        <li><a href="{% url 'professional-services' %}">Professional Services</a></li>
                     </ul>
                 </li>
 
@@ -88,11 +85,11 @@
                         <li><a href="{% url 'links-and-tools' %}">Links and Tools</a></li>
                         <li><a href="http://imperialnews.network/" target="_blank">Imperial News Network</a></li>
                         <li role="separator" class="divider"></li>
-                        <li><a href="https://discord.gg/QADycb2" target="_blank">Add your content</a></li>
+                        <li><a href="https://discord.gg/Q9WHD3J" target="_blank">Add your content</a></li>
                     </ul>
                 </li>
 
-                <li><a id="order" href="https://discord.gg/QADycb2" target="_blank"><button type="button" class="btn btn-primary btn-lg purnkleen-yellow-btn">CONTACT US</button></a></li>
+                <li><a id="order" href="https://discord.gg/Q9WHD3J" target="_blank"><button type="button" class="btn btn-primary btn-lg purnkleen-yellow-btn">CONTACT US</button></a></li>
             </ul>
         </div><!--/.nav-collapse -->
     </div>

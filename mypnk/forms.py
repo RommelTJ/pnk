@@ -1,6 +1,7 @@
 from django import forms
-from django.utils import timezone
+from django.utils.datetime_safe import datetime
 from django.utils.safestring import mark_safe
+from django_countries.widgets import CountrySelectWidget
 from registration.forms import RegistrationForm
 from registration.signals import user_registered
 
@@ -8,7 +9,7 @@ from .models import PNKEmployee
 
 
 class AdminImageFieldWidget(forms.widgets.FileInput):
-    def __init__(self, placeholder='/images/profile/placeholder.thumbnail.png'):
+    def __init__(self, placeholder='/media/profile/placeholder.thumbnail.png'):
         self.placeholder = placeholder
         super(AdminImageFieldWidget, self).__init__({})
 
@@ -18,8 +19,12 @@ class AdminImageFieldWidget(forms.widgets.FileInput):
 
 
 class PNKEmployeeForm(forms.ModelForm):
-    hire_date = forms.DateField(widget=forms.SelectDateWidget(years=range(1980, 2025)), initial=timezone.now)
-    birth_date = forms.DateField(widget=forms.SelectDateWidget(years=range(1980, 2025)), initial=timezone.now)
+    callsign = forms.CharField(widget=forms.TextInput(attrs={'placeholder': 'RedOne'}))
+    rsi_url = forms.URLField(
+        widget=forms.URLInput(attrs={'placeholder': 'https://robertsspaceindustries.com/citizens/croberts68'}),
+        label="RSI URL"
+    )
+    birth_date = forms.DateField(widget=forms.SelectDateWidget(years=range(1950, 2025)), initial=datetime(1988, 01, 01))
     image = forms.ImageField(label='Profile Image', widget=AdminImageFieldWidget(), required=False)
 
     def __str__(self):
@@ -27,7 +32,18 @@ class PNKEmployeeForm(forms.ModelForm):
 
     class Meta:
         model = PNKEmployee
-        fields = '__all__'
+        fields = (
+            'callsign',
+            'rsi_url',
+            'orgs',
+            'primary_activity',
+            'secondary_activity',
+            'country',
+            'gender',
+            'birth_date',
+            'image',
+        )
+        widgets = {'country': CountrySelectWidget()}
 
 
 class MyExtendedForm(RegistrationForm):
