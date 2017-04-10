@@ -71,7 +71,6 @@ urlpatterns = [
     #########################
     # Start Knowledge Views #
     #########################
-    url(r'^pnk-podcast/$', views.pnk_podcast, name='pnk-podcast'),
     url(r'^links-and-tools/$', views.links_tools, name='links-and-tools'),
     #########################
     # End Knowledge Views   #
