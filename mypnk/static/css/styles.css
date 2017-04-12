@@ -82,6 +82,16 @@ a#order {
     margin: 0 10px;
 }
 
+/* Lists */
+.list-group-item.active, .list-group-item.active:focus, .list-group-item.active:hover {
+    z-index: 2;
+    color: black;
+    background-color: #FFE411;
+    border-color: #FFE411;
+    font-family: Furore;
+    pointer-events: none;
+}
+
 /* Cards */
 .preview {
     margin-bottom: 4em;

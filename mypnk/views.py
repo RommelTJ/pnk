@@ -80,10 +80,6 @@ def transportation(request):
 #########################
 # Start Knowledge Views #
 #########################
-def pnk_podcast(request):
-    return render(request, 'pnk-podcast.html', {})
-
-
 def links_tools(request):
     return render(request, 'links-and-tools.html', {})
 #########################
