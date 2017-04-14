@@ -151,9 +151,8 @@ a#order {
 
 div#purnkleenFeature {
     height: 50vh;
-    padding-top: 8vh;
-    padding-bottom: 20px;
-    margin-bottom: 50px;
+    padding-top: 10vh;
+    margin-bottom: 20px;
 
     background: url("../img/Yela.jpg") no-repeat fixed center;
     background-size: cover;
@@ -237,7 +236,7 @@ div#purnkleenOpsTitle {
 }
 .motto {
     color: #FFE411;
-    font-size: 30px;
+    font-size: 20px;
     font-family: Furore;
     text-shadow: 0px 0px 10px rgba(0,0,0,0.74);
 }
@@ -275,6 +274,9 @@ a.opslink:hover, a.opslink:active, a.opslink:focus, a.opslink:active:focus {
     color: #80DBFF;
 }
 @media (min-width: 768px) {
+    .motto {
+        font-size: 30px;
+    }
     .starfarer {
         background-image: url('../img/starfarer.png');
         height: 70vh;
@@ -285,6 +287,7 @@ a.opslink:hover, a.opslink:active, a.opslink:focus, a.opslink:active:focus {
     div#purnkleenFeature {
         height: 70vh;
         padding-top: 0;
+        margin-bottom: 20px;
     }
     div#purnkleenAboutFeature {
         height: 40vh;
@@ -357,8 +360,6 @@ h2 {
 }
 .featurette-divider {
     margin: 80px 0;
-    /*margin-top: 90px;*/
-    /*margin-bottom: 20px;*/
 }
 .featurette-image {
     margin-top: 80px;
