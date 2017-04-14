@@ -71,7 +71,7 @@ a#order {
 /*Footer*/
 .footer {
     position: absolute;
-    bottom: 0;
+    bottom: -40px;
 }
 .container .socialmedia {
     margin: 20px;
@@ -110,6 +110,10 @@ a#order {
     min-height: 60px;
 }
 
+.btn-group {
+    margin-bottom: 10px;
+}
+
 /* Buttons */
 .purnkleen-red-btn {
     background-color: #C9302C;
@@ -146,7 +150,8 @@ a#order {
 /*purnkleenTeamFeature*/
 
 div#purnkleenFeature {
-    height: 70vh;
+    height: 50vh;
+    padding-top: 8vh;
     padding-bottom: 20px;
     margin-bottom: 50px;
 
@@ -277,6 +282,10 @@ a.opslink:hover, a.opslink:active, a.opslink:focus, a.opslink:active:focus {
         background-position: center 70%;
         background-size: 90% auto;
     }
+    div#purnkleenFeature {
+        height: 70vh;
+        padding-top: 0;
+    }
     div#purnkleenAboutFeature {
         height: 40vh;
     }
@@ -309,6 +318,13 @@ a.opslink:hover, a.opslink:active, a.opslink:focus, a.opslink:active:focus {
     }
     .fleet-ops {
         height: 70vh;
+    }
+    .btn-group {
+        margin-bottom: unset;
+    }
+    .footer {
+        position: absolute;
+        bottom: 0;
     }
 }
 
