@@ -2289,7 +2289,27 @@ KEY FRAME
     background-color: #EBE10B;
     color: black;
 }
-
+@media (min-width: 768px) {
+    .starfarer {
+        background-repeat: no-repeat;
+        background-image: url('../img/starfarer.png');
+        height: 70vh;
+        background-position: center 50%;
+        background-size: 90% auto;
+    }
+}
+.motto {
+    /*color: #FFE411;*/
+    font-size: 2vw;
+    /*text-shadow: 0px 0px 10px rgba(0,0,0,0.74);*/
+    /*font-weight: bold;*/
+    text-transform: uppercase;
+    /*padding-top: 30vh;*/
+    /*line-height: 2.3vw;*/
+}
+.solutions {
+    color: #C9302C;
+}
 
 
 /*!**/
