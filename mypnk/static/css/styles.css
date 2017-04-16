@@ -2279,6 +2279,16 @@ KEY FRAME
 }
 
 
+/* Custom Styles */
+.purnkleen-yellow-btn {
+    background-color: #FFE411;
+    color: black;
+    text-transform: uppercase;
+}
+.purnkleen-yellow-btn:hover, .purnkleen-yellow-btn:active, .purnkleen-yellow-btn:focus, .purnkleen-yellow-btn:active:focus {
+    background-color: #EBE10B;
+    color: black;
+}
 
 
 
@@ -2312,15 +2322,7 @@ KEY FRAME
     /*background-color: black;*/
     /*border: none;*/
 /*}*/
-/*.purnkleen-yellow-btn {*/
-    /*background-color: #FFE411;*/
-    /*color: black;*/
-    /*text-transform: uppercase;*/
-/*}*/
-/*.purnkleen-yellow-btn:hover, .purnkleen-yellow-btn:active, .purnkleen-yellow-btn:focus, .purnkleen-yellow-btn:active:focus {*/
-    /*background-color: #EBE10B;*/
-    /*color: black;*/
-/*}*/
+
 /*.purnkleen-navbar-nav > li > a {*/
     /*font-size: 1.25em;*/
     /*color: #E5E5E5 !important;*/
