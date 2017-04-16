@@ -50,12 +50,12 @@ Top Bar
 
 
 /*Color Preset for Menu*/
-.menuzord .menuzord-menu>li.active>a,
-.menuzord .menuzord-menu>li.active>a>i,
-.menuzord .menuzord-menu>li:hover>a,
-.menuzord .menuzord-menu>li:hover>a>i{
-    color: #FFE411 !important;
-}
+/*.menuzord .menuzord-menu>li.active>a,*/
+/*.menuzord .menuzord-menu>li.active>a>i,*/
+/*.menuzord .menuzord-menu>li:hover>a,*/
+/*.menuzord .menuzord-menu>li:hover>a>i{*/
+    /*color: #fff !important;*/
+/*}*/
 
 .nav-border-bottom .menuzord .menuzord-menu>li.active>a,
 .nav-border-bottom .menuzord .menuzord-menu>li:hover>a {
@@ -342,10 +342,10 @@ header.sticky .menuzord-menu>li>a,
 }
 
 
-.menuzord-menu>li.active>a,
-.menuzord-menu>li:hover>a {
-    color: #202020
-}
+/*.menuzord-menu>li.active>a,*/
+/*.menuzord-menu>li:hover>a {*/
+    /*color: #202020*/
+/*}*/
 .menuzord-menu ul.dropdown,
 .menuzord-menu ul.dropdown li ul.dropdown {
     list-style: none;
@@ -413,7 +413,7 @@ header.sticky .menuzord-menu>li>a,
 .menuzord-menu ul.dropdown li.active>a,
 .menuzord-menu>li>.megamenu .megamenu-row li:hover>a,
 .menuzord-menu>li>.megamenu .megamenu-row li.active>a {
-    color: #FFE411;
+    color: #000;
     background-color: #fafafa;
 }
 .menuzord-menu>li>.megamenu .megamenu-row li a {
@@ -1094,7 +1094,7 @@ Responsive Menu
     .brand-header .menuzord .menuzord-menu>li:hover>a,
     .brand-header .menuzord .menuzord-menu>li.active>a,
     .brand-header .menuzord .menuzord-menu>li.active>a i {
-        color: #FFE411 !important;
+        color: #fff !important;
     }
 
 }
