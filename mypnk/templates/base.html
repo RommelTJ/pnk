@@ -10,7 +10,7 @@
     <meta name="keywords" content="pur n kleen, pnk, star citizen, the expanse, gaming">
     <meta name="author" content="Rommel Rico">
 
-    <title>Homepage 3</title>
+    <title>Pur'N'Kleen Company</title>
 
     <!--  favicon -->
     <link rel="icon" href="{% static 'favicon.ico' %}">
@@ -66,30 +66,10 @@
 
         <div class="container">
 
-            <div class="search-wrapper">
-                <div class="search-trigger light pull-right">
-                    <div class='search-btn'></div>
-                    <i class="material-icons">&#xE8B6;</i>
-                </div>
-
-                <!-- Modal Search Form -->
-                <i class="search-close material-icons">&#xE5CD;</i>
-                <div class="search-form-wrapper">
-                    <form action="#" class="white-form">
-                        <div class="input-field">
-                            <input type="text" name="search" id="search">
-                            <label for="search" class="">Search Here...</label>
-                        </div>
-                        <button class="btn pink search-button waves-effect waves-light" type="submit"><i class="material-icons">&#xE8B6;</i></button>
-
-                    </form>
-                </div>
-            </div><!-- /.search-wrapper -->
-
             <div id="materialize-menu" class="menuzord">
 
                 <!--logo start-->
-                <a href="index.html" class="logo-brand">
+                <a href="{% url 'index' %}" class="logo-brand">
                     <img class="logo-dark" src="{% static 'img/PurNKleen_logo.png' %}" alt=""/>
                     <img class="logo-light" src="{% static 'img/PurNKleen_logo.png' %}" alt=""/>
                 </a>
@@ -97,62 +77,38 @@
 
                 <!--mega menu start-->
                 <ul class="menuzord-menu pull-right light">
-                    <li class="active"><a href="javascript:void(0)">About Us</a>
-                        <div class="megamenu">
-                            <div class="megamenu-row">
-                                <div class="col3">
-                                    <ul class="list-unstyled clearfix">
-                                        <li><a href="{% url 'about' %}">About Us</a></li>
-                                        <li><a href="{% url 'vision' %}">Vision Statement</a></li>
-                                        <li><a href="{% url 'values' %}">Fundamental Values</a></li>
-                                        <li><a href="{% url 'team' %}">Meet Our Team</a></li>
-                                        <li><a href="{% url 'benefits' %}">Benefits</a></li>
-                                        <li><a href="{% url 'bylaws' %}">Bylaws</a></li>
-                                        <li><a href="{% url 'join' %}">Join Us</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
+                    <li><a href="javascript:void(0)">About Us</a>
+                        <ul class="dropdown">
+                            <li><a href="{% url 'about' %}">About Us</a></li>
+                            <li><a href="{% url 'vision' %}">Vision Statement</a></li>
+                            <li><a href="{% url 'values' %}">Fundamental Values</a></li>
+                            <li><a href="{% url 'team' %}">Meet Our Team</a></li>
+                            <li><a href="{% url 'benefits' %}">Benefits</a></li>
+                            <li><a href="{% url 'bylaws' %}">Bylaws</a></li>
+                            <li><a href="{% url 'join' %}">Join Us</a></li>
+                        </ul>
                     </li>
 
                     <li><a href="javascript:void(0)">Solutions</a>
-                        <div class="megamenu">
-                            <div class="megamenu-row">
-                                <div class="col3">
-                                    <ul class="list-unstyled">
-                                        <li><a href="{% url 'mission-planner' %}">Mission Planner</a></li>
-                                        <li><a href="{% url 'fleet-view' %}">Fleet View</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
+                        <ul class="dropdown">
+                            <li><a href="{% url 'mission-planner' %}">Mission Planner</a></li>
+                            <li><a href="{% url 'fleet-view' %}">Fleet View</a></li>
+                        </ul>
                     </li>
 
                     <li><a href="javascript:void(0)">Services</a>
-                        <div class="megamenu">
-                            <div class="megamenu-row">
-                                <div class="col3">
-                                    <ul class="list-unstyled">
-                                        <li><a href="{% url 'fuel-services' %}">Fuel Services</a></li>
-                                        <li><a href="{% url 'maintenance-and-repair' %}">Maintenance and Repair</a></li>
-                                        <li><a href="{% url 'transportation' %}">Transportation</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
+                        <ul class="dropdown">
+                            <li><a href="{% url 'fuel-services' %}">Fuel Services</a></li>
+                            <li><a href="{% url 'maintenance-and-repair' %}">Maintenance and Repair</a></li>
+                            <li><a href="{% url 'transportation' %}">Transportation</a></li>
+                        </ul>
                     </li>
 
                     <li><a href="javascript:void(0)">Knowledge</a>
-                        <div class="megamenu">
-                            <div class="megamenu-row">
-                                <div class="col3">
-                                    <ul class="list-unstyled">
-                                        <li><a href="http://blog.purnkleen.com/?cat=2">PNK Podcast</a></li>
-                                        <li><a href="{% url 'links-and-tools' %}">Links and Tools</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
+                        <ul class="dropdown">
+                            <li><a href="http://blog.purnkleen.com/?cat=2">PNK Podcast</a></li>
+                            <li><a href="{% url 'links-and-tools' %}">Links and Tools</a></li>
+                        </ul>
                     </li>
 
                     <!-- Contact Us button -->

@@ -6,157 +6,265 @@
 
 {% block container %}
 
-    <div id="purnkleenFeature">
+    <!-- Hero Section -->
+    <section class="banner-4 parallax-bg bg-fixed overlay dark-4 fullscreen-banner valign-wrapper" data-stellar-background-ratio="0.5">
+        <div class="valign-cell">
+            <div class="container padding-top-110">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h1 class="intro-title text-uppercase white-text mb-30">Pur'N'Kleen</h1>
+                        <p class="lead text-regular white-text">Specialising in customer experiences brand development, we combine digital craftsmanship.</p>
+                    </div><!-- col-md-6 -->
+                </div><!-- row -->
+            </div><!-- /.container -->
+        </div><!-- /.valign-cell -->
+    </section>
+    <!-- Hero Section End -->
+
+
+{#    <div id="purnkleenFeature">#}
+{#        <div class="container">#}
+{#            <div class="row">#}
+{#                <div class="col-sm-7 starfarer">#}
+{#                    <div class="motto">Wherever There’s a Job to Be Done.<br/><span class="solutions">We have solutions</span></div>#}
+{#                </div>#}
+{#            </div>#}
+{#        </div>#}
+{#    </div>#}
+{##}
+
+    <section class="section-padding banner-6 parallax-bg bg-fixed overlay light-9" data-stellar-background-ratio="0.5">
         <div class="container">
-            <div class="row">
-                <div class="col-sm-7 starfarer">
-                    <div class="motto">Wherever There’s a Job to Be Done.<br/><span class="solutions">We have solutions</span></div>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <div class="container">
-
-        <div class="row">
-
-            {% if user.is_authenticated %}
-                <div class="col-lg-4 col-sm-6">
-                    <div class="preview">
-                        <div class="image">
-                            <a href="{% url 'join' %}">
-                                <img class="img-responsive" src="{% static 'img/Diversity.jpg' %}" alt="Diversity"></a>
-                        </div>
-                        <div class="options">
-                            <h3>Oi! Pampaw!</h3>
-                            <p>
-                                Now that you're logged in, perhaps you want to join PNK as an affiliate or member, sa-sa?
-                            </p>
-                            <div class="btn-group">
-                                <a class="btn btn-lg purnkleen-red-btn" href="{% url 'auth_logout' %}">Sign Out</a>
-                            </div>
-                            <div class="btn-group">
-                                <a class="btn btn-lg purnkleen-green-btn" href="{% url 'join' %}">Join PNK</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            {% else %}
-                <div class="col-lg-4 col-sm-6">
-                    <div class="preview">
-                        <div class="image">
-                            <a href="{% url 'registration_register' %}">
-                                <img class="img-responsive" src="{% static 'img/Diversity.jpg' %}" alt="Diversity"></a>
-                        </div>
-                        <div class="options">
-                            <h3>Oi! Pampaw!</h3>
-                            <p>
-                                To use the PNK solutions, you need to Register or Sign In, Sabe?
-                            </p>
-                            <div class="btn-group">
-                                <a class="btn btn-lg purnkleen-red-btn" href="{% url 'registration_register' %}">Register</a>
-                            </div>
-                            <div class="btn-group">
-                                <a class="btn btn-lg purnkleen-green-btn" href="{% url 'auth_login' %}">Sign In</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            {% endif %}
-
-            <div class="col-lg-4 col-sm-6">
-                <div class="preview">
-                    <div class="image">
-                        <a href="{% url 'giveaway' %}">
-                            <img class="img-responsive" src="{% static 'img/Archimedes.jpg' %}" alt="P-72 Archimedes LTI"></a>
-                    </div>
-                    <div class="options">
-                        <h3>FREE P-72 Archimedes LTI</h3>
-                        <p>
-                            PNK is sponsoring an Interstellar Diplomacy "Diplomatic question of the month". Click below
-                            for more details.
-                        </p>
-                        <div class="btn-group">
-                            <a class="btn btn-lg purnkleen-green-btn" href="{% url 'giveaway' %}">More Details</a>
-                        </div>
-                    </div>
-                </div>
+            <div class="text-center mb-80">
+                <h2 class="section-title text-uppercase">Our Features</h2>
+                <p class="section-sub">Quisque non erat mi. Etiam congue et augue sed tempus. Aenean sed ipsum luctus, scelerisque ipsum nec, iaculis justo. Sed at vestibulum purus, sit amet viverra diam nulla ac nisi rhoncus.</p>
             </div>
 
-            <div class="col-lg-4 col-sm-6">
-                <div class="preview">
-                    <div class="image">
-                        <a href="{% url 'fuel-services' %}">
-                            <img class="img-responsive" src="{% static 'img/Fuel.jpg' %}" alt="Fuel Services"></a>
-                    </div>
-                    <div class="options">
-                        <h3>Fuel Services</h3>
-                        <p>
-                            Our line of fuel products and services are designed to give pros the performance they need
-                            to get their jobs done right.
-                        </p>
-                        <div class="btn-group">
-                            <a class="btn btn-lg purnkleen-red-btn" href="{% url 'fuel-services' %}">Fuel Services</a>
+            <div class="row equal-height-row">
+
+                <div class="col-md-4 mb-30">
+                    <div class="featured-item border-box radius-4 hover brand-hover equal-height-column">
+                        <div class="icon mb-30">
+                            <i class="material-icons brand-icon">&#xE32A;</i>
                         </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="row">
-
-            <div class="col-lg-4 col-sm-6">
-                <div class="preview">
-                    <div class="image">
-                        <a href="{% url 'maintenance-and-repair' %}">
-                            <img class="img-responsive" src="{% static 'img/Maintenance.jpg' %}" alt="Maintenance and Repair"></a>
-                    </div>
-                    <div class="options">
-                        <h3>Maintenance Services</h3>
-                        <p>
-                            Let us take care of the regular maintenance for your ships. Our professional mechanics can
-                            fix any problem.
-                        </p>
-                        <div class="btn-group">
-                            <a class="btn btn-lg purnkleen-red-btn" href="{% url 'maintenance-and-repair' %}">Maintenance Services</a>
+                        <div class="desc">
+                            <h2>We are creative</h2>
+                            <p>Porttitor communicate pandemic data rather than enabled niche pandemic data rather markets neque pulvinar vitae.</p>
                         </div>
-                    </div>
-                </div>
-            </div>
+                    </div><!-- /.featured-item -->
+                </div><!-- /.col-md-4 -->
 
-            <div class="col-lg-4 col-sm-6">
-                <div class="preview">
-                    <div class="image">
-                        <img class="img-responsive" src="{% static 'img/FleetView.jpg' %}" alt="Fleet View">
-                    </div>
-                    <div class="options">
-                        <h3>Fleet Viewer</h3>
-                        <p>A tool to help you manage your fleet.</p>
-                        <div class="btn-group">
-                            <a class="btn btn-lg purnkleen-red-btn disabled" href="{% url 'fleet-view' %}">Coming soon</a>
+
+                <div class="col-md-4 mb-30">
+                    <div class="featured-item border-box radius-4 hover brand-hover equal-height-column">
+                        <div class="icon mb-30">
+                            <i class="material-icons brand-icon">&#xE0BF;</i>
                         </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-sm-6">
-                <div class="preview">
-                    <div class="image">
-                        <img class="img-responsive" src="{% static 'img/MissionPlanner.jpg' %}" alt="Mission Planner">
-                    </div>
-                    <div class="options">
-                        <h3>Mission Planner</h3>
-                        <p>A tool to help you plan missions for your org.</p>
-                        <div class="btn-group">
-                            <a class="btn btn-lg purnkleen-red-btn disabled" href="{% url 'mission-planner' %}">Coming soon</a>
+                        <div class="desc">
+                            <h2>We are awesome</h2>
+                            <p>Porttitor communicate pandemic data rather than enabled niche pandemic data rather markets neque pulvinar vitae.</p>
                         </div>
-                    </div>
-                </div>
-            </div>
+                    </div><!-- /.featured-item -->
+                </div><!-- /.col-md-4 -->
 
-        </div>
 
-    </div>
+                <div class="col-md-4 mb-30">
+                    <div class="featured-item border-box radius-4 hover brand-hover equal-height-column">
+                        <div class="icon mb-30">
+                            <i class="material-icons brand-icon">&#xE323;</i>
+                        </div>
+                        <div class="desc">
+                            <h2>We are Taltented</h2>
+                            <p>Porttitor communicate pandemic data rather than enabled niche pandemic data rather markets neque pulvinar vitae.</p>
+                        </div>
+                    </div><!-- /.featured-item -->
+                </div><!-- /.col-md-4 -->
+
+
+                <div class="col-md-4">
+                    <div class="featured-item border-box radius-4 hover brand-hover equal-height-column">
+                        <div class="icon mb-30">
+                            <i class="material-icons brand-icon">&#xE32A;</i>
+                        </div>
+                        <div class="desc">
+                            <h2>We are secured</h2>
+                            <p>Porttitor communicate pandemic data rather than enabled niche pandemic data rather markets neque pulvinar vitae.</p>
+                        </div>
+                    </div><!-- /.featured-item -->
+                </div><!-- /.col-md-4 -->
+
+
+                <div class="col-md-4">
+                    <div class="featured-item border-box radius-4 hover brand-hover equal-height-column">
+                        <div class="icon mb-30">
+                            <i class="material-icons brand-icon">&#xE149;</i>
+                        </div>
+                        <div class="desc">
+                            <h2>We are awesome</h2>
+                            <p>Porttitor communicate pandemic data rather than enabled niche pandemic data rather markets neque pulvinar vitae.</p>
+                        </div>
+                    </div><!-- /.featured-item -->
+                </div><!-- /.col-md-4 -->
+
+
+                <div class="col-md-4">
+                    <div class="featured-item border-box radius-4 hover brand-hover equal-height-column">
+                        <div class="icon mb-30">
+                            <i class="material-icons brand-icon">&#xE0C9;</i>
+                        </div>
+                        <div class="desc">
+                            <h2>We are Taltented</h2>
+                            <p>Porttitor communicate pandemic data rather than enabled niche pandemic data rather markets neque pulvinar vitae.</p>
+                        </div>
+                    </div><!-- /.featured-item -->
+                </div><!-- /.col-md-4 -->
+            </div><!-- /.row -->
+
+        </div><!-- /.container -->
+    </section>
+
+{#    <div class="container">#}
+{##}
+{#        <div class="row">#}
+{##}
+{#            {% if user.is_authenticated %}#}
+{#                <div class="col-lg-4 col-sm-6">#}
+{#                    <div class="preview">#}
+{#                        <div class="image">#}
+{#                            <a href="{% url 'join' %}">#}
+{#                                <img class="img-responsive" src="{% static 'img/Diversity.jpg' %}" alt="Diversity"></a>#}
+{#                        </div>#}
+{#                        <div class="options">#}
+{#                            <h3>Oi! Pampaw!</h3>#}
+{#                            <p>#}
+{#                                Now that you're logged in, perhaps you want to join PNK as an affiliate or member, sa-sa?#}
+{#                            </p>#}
+{#                            <div class="btn-group">#}
+{#                                <a class="btn btn-lg purnkleen-red-btn" href="{% url 'auth_logout' %}">Sign Out</a>#}
+{#                            </div>#}
+{#                            <div class="btn-group">#}
+{#                                <a class="btn btn-lg purnkleen-green-btn" href="{% url 'join' %}">Join PNK</a>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
+{#            {% else %}#}
+{#                <div class="col-lg-4 col-sm-6">#}
+{#                    <div class="preview">#}
+{#                        <div class="image">#}
+{#                            <a href="{% url 'registration_register' %}">#}
+{#                                <img class="img-responsive" src="{% static 'img/Diversity.jpg' %}" alt="Diversity"></a>#}
+{#                        </div>#}
+{#                        <div class="options">#}
+{#                            <h3>Oi! Pampaw!</h3>#}
+{#                            <p>#}
+{#                                To use the PNK solutions, you need to Register or Sign In, Sabe?#}
+{#                            </p>#}
+{#                            <div class="btn-group">#}
+{#                                <a class="btn btn-lg purnkleen-red-btn" href="{% url 'registration_register' %}">Register</a>#}
+{#                            </div>#}
+{#                            <div class="btn-group">#}
+{#                                <a class="btn btn-lg purnkleen-green-btn" href="{% url 'auth_login' %}">Sign In</a>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
+{#            {% endif %}#}
+{##}
+{#            <div class="col-lg-4 col-sm-6">#}
+{#                <div class="preview">#}
+{#                    <div class="image">#}
+{#                        <a href="{% url 'giveaway' %}">#}
+{#                            <img class="img-responsive" src="{% static 'img/Archimedes.jpg' %}" alt="P-72 Archimedes LTI"></a>#}
+{#                    </div>#}
+{#                    <div class="options">#}
+{#                        <h3>FREE P-72 Archimedes LTI</h3>#}
+{#                        <p>#}
+{#                            PNK is sponsoring an Interstellar Diplomacy "Diplomatic question of the month". Click below#}
+{#                            for more details.#}
+{#                        </p>#}
+{#                        <div class="btn-group">#}
+{#                            <a class="btn btn-lg purnkleen-green-btn" href="{% url 'giveaway' %}">More Details</a>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
+{#            </div>#}
+{##}
+{#            <div class="col-lg-4 col-sm-6">#}
+{#                <div class="preview">#}
+{#                    <div class="image">#}
+{#                        <a href="{% url 'fuel-services' %}">#}
+{#                            <img class="img-responsive" src="{% static 'img/Fuel.jpg' %}" alt="Fuel Services"></a>#}
+{#                    </div>#}
+{#                    <div class="options">#}
+{#                        <h3>Fuel Services</h3>#}
+{#                        <p>#}
+{#                            Our line of fuel products and services are designed to give pros the performance they need#}
+{#                            to get their jobs done right.#}
+{#                        </p>#}
+{#                        <div class="btn-group">#}
+{#                            <a class="btn btn-lg purnkleen-red-btn" href="{% url 'fuel-services' %}">Fuel Services</a>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
+{#            </div>#}
+{##}
+{#        </div>#}
+{##}
+{#        <div class="row">#}
+{##}
+{#            <div class="col-lg-4 col-sm-6">#}
+{#                <div class="preview">#}
+{#                    <div class="image">#}
+{#                        <a href="{% url 'maintenance-and-repair' %}">#}
+{#                            <img class="img-responsive" src="{% static 'img/Maintenance.jpg' %}" alt="Maintenance and Repair"></a>#}
+{#                    </div>#}
+{#                    <div class="options">#}
+{#                        <h3>Maintenance Services</h3>#}
+{#                        <p>#}
+{#                            Let us take care of the regular maintenance for your ships. Our professional mechanics can#}
+{#                            fix any problem.#}
+{#                        </p>#}
+{#                        <div class="btn-group">#}
+{#                            <a class="btn btn-lg purnkleen-red-btn" href="{% url 'maintenance-and-repair' %}">Maintenance Services</a>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
+{#            </div>#}
+{##}
+{#            <div class="col-lg-4 col-sm-6">#}
+{#                <div class="preview">#}
+{#                    <div class="image">#}
+{#                        <img class="img-responsive" src="{% static 'img/FleetView.jpg' %}" alt="Fleet View">#}
+{#                    </div>#}
+{#                    <div class="options">#}
+{#                        <h3>Fleet Viewer</h3>#}
+{#                        <p>A tool to help you manage your fleet.</p>#}
+{#                        <div class="btn-group">#}
+{#                            <a class="btn btn-lg purnkleen-red-btn disabled" href="{% url 'fleet-view' %}">Coming soon</a>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
+{#            </div>#}
+{##}
+{#            <div class="col-lg-4 col-sm-6">#}
+{#                <div class="preview">#}
+{#                    <div class="image">#}
+{#                        <img class="img-responsive" src="{% static 'img/MissionPlanner.jpg' %}" alt="Mission Planner">#}
+{#                    </div>#}
+{#                    <div class="options">#}
+{#                        <h3>Mission Planner</h3>#}
+{#                        <p>A tool to help you plan missions for your org.</p>#}
+{#                        <div class="btn-group">#}
+{#                            <a class="btn btn-lg purnkleen-red-btn disabled" href="{% url 'mission-planner' %}">Coming soon</a>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
+{#            </div>#}
+{##}
+{#        </div>#}
+{##}
+{#    </div>#}
 
 {% endblock %}
