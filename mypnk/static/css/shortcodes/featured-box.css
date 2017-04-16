@@ -137,7 +137,7 @@ Common featured boxes
 
 /*colored icon*/
 .brand-icon {
-    color: #03a9f4;
+    color: #FFE411;
 }
 .pink-icon {
     color: #ed145b ;
@@ -167,7 +167,7 @@ Common featured boxes
 
 
 .brand-hover:hover {
-    background-color: #03a9f4 !important;
+    background-color: #FFE411 !important;
 }
 .pink-hover:hover {
     background-color: #ed145b !important;
@@ -187,7 +187,7 @@ Common featured boxes
 .hover:hover i,
 .hover:hover h2,
 .hover:hover .content {
-    color: #fff !important;
+    color: #000 !important;
 }
 
 .hover:hover i {
@@ -203,15 +203,18 @@ Common featured boxes
 
 /*icon hover change*/
 .icon-hover:hover .icon{
-    color: #fff !important;
+    color: #000 !important;
     box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .icon-hover:hover .colored{
-    color: #fff !important;
+    color: #000 !important;
 }
 
 .icon-hover-blue:hover .icon{
     background-color: #03a9f4;
+}
+.icon-hover-yellow:hover .icon{
+    background-color: #FFE411;
 }
 .icon-hover-pink:hover .icon{
     background-color: #ed145b;
@@ -314,7 +317,7 @@ Hover outline
 .featured-item.hover-outline:hover .icon .colored,
 .featured-item.hover-outline:hover .icon .brand-icon,
 .featured-item.hover-outline:hover .desc {
-    color: #fff !important;
+    color: #000 !important;
 }
 
 .featured-item.hover-outline:hover {
@@ -388,7 +391,7 @@ Feature Background
 .fullwidth .featured-item.feature-icon .icon {
     border: 0;
     background-color: transparent;
-    color: #fff;
+    color: #000;
     font-size: 40px;
 }
 
@@ -401,6 +404,9 @@ Feature Background
 }
 .feature-background .featured-item.blue-hover:hover {
     background-color: #03a9f4;
+}
+.feature-background .featured-item.yellow-hover:hover {
+    background-color: #FFE411;
 }
 
 
@@ -426,10 +432,10 @@ Border Box Style
 }
 .featured-item.border-box:hover h2,
 .featured-item.border-box:hover .icon {
-    color: #fff;
+    color: #000;
 }
 .featured-item.border-box:hover {
-    color: #fff;
+    color: #000;
     border: 1px solid transparent;
     box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -460,7 +466,7 @@ Owl Carousel Customize
 /*colored dot*/
 .brand-dot.owl-theme .owl-dots .owl-dot.active span, 
 .brand-dot.owl-theme .owl-dots .owl-dot:hover span {
-    background: #03a9f4;
+    background: #FFE411;
 }
 
 
@@ -490,7 +496,7 @@ Flat Border Box Style
     font-weight: 700;
 }
 .featured-item.flat-border-box .readmore:hover {
-    color: #03a9f4;
+    color: #FFE411;
 }
 
 .featured-item.flat-border-box .readmore i {
@@ -562,7 +568,7 @@ Featured Plus Box Style
 }
 
 .featured.plus-box .featured-item:hover .icon {
-    color: #03a9f4;
+    color: #FFE411;
 }
 
 
@@ -728,7 +734,7 @@ SEO Featured Service
     right: -100px;
     width: 130px;
     height: 130px;
-    background-color: #03a9f4;
+    background-color: #FFE411;
     z-index: 1;
     border-radius: 100%;
     -webkit-transform: scale(0) translateZ(0);

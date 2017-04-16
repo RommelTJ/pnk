@@ -85,7 +85,7 @@ a > * {
 }
 a:focus,
 a:hover {
-    color: #03a9f4;
+    color: #FFE411;
     outline: none;
     text-decoration: none;
 }
@@ -153,7 +153,7 @@ hr {
     font-size: 16px;
     line-height: 26px;
     border-radius: 2px;
-    background-color: #03a9f4; /*brand primary color*/
+    background-color: #FFE411; /*brand primary color*/
     border: 0;
 }
 
@@ -171,7 +171,7 @@ hr {
 }
 
 .btn:hover{
-    background-color: #03a9f4;
+    background-color: #FFE411;
 }
 
 .btn.active,
@@ -183,7 +183,7 @@ hr {
 .btn.white,
 .btn.white:hover,
 .btn.white:focus {
-    color: #03a9f4;
+    color: #FFE411;
 }
 
 .btn i.material-icons {
@@ -193,7 +193,7 @@ hr {
 .btn.focus,
 .btn:focus,
 .btn:hover {
-    color: #fff;
+    color: #000;
 }
 .btn:focus,
 button:focus {
@@ -273,7 +273,7 @@ thead {
     color: #999;
 }
 .contact-info .mail a:hover {
-    color: #03a9f4;
+    color: #FFE411;
 }
 
 #mapcontent p {
@@ -283,10 +283,10 @@ thead {
 
 /*Contact Form*/
 .contact-form-wrapper {
-    background: url('assets/img/vactor-map.png') no-repeat center center;
+    background: url('../img/vector-map.png') no-repeat center center;
 }
 .contact-form-bg {
-    background: url('assets/img/vactor-map.png') no-repeat center center;
+    background: url('../img/vector-map.png') no-repeat center center;
     background-size: contain;
 }
 
@@ -679,13 +679,13 @@ thead {
 
 /* ================= Color Presets ==================== */
 .brand-color {
-    color: #03a9f4 !important; /*theme primary color*/
+    color: #FFE411 !important; /*theme primary color*/
 }
 .brand-color.darken-2 {
     color: #0288d1 !important;
 }
 .brand-bg {
-    background-color: #03a9f4 !important; /*theme primary background color*/
+    background-color: #FFE411 !important; /*theme primary background color*/
 }
 
 .brand-bg.darken-2 {
@@ -693,7 +693,7 @@ thead {
 }
 
 .brand-hover:hover {
-    background-color: #03a9f4 !important; /*theme primary hover color*/
+    background-color: #FFE411 !important; /*theme primary hover color*/
 }
 
 
@@ -1307,7 +1307,7 @@ button.mfp-arrow {
     color: #999;
 }
 .profile .available a:hover{
-    color: #03a9f4;
+    color: #FFE411;
 }
 
 @media screen and (max-width: 991px) {
@@ -1387,7 +1387,7 @@ button.mfp-arrow {
     content: "";
     width: 20px;
     height: 20px;
-    background-color: #03a9f4;
+    background-color: #FFE411;
     border-radius: 50%;
     position: absolute;
     top: 0;
@@ -1568,7 +1568,7 @@ Gallery Thumb
 }
 .food-menu-label {
     background: #fff8f1;
-    color: #03a9f4;
+    color: #FFE411;
     display: inline-block;
     padding: 0 10px;
     font-style: italic;
@@ -2074,7 +2074,7 @@ KEY FRAME
 }
 
 .search-trigger i:hover {
-    color: #03a9f4;
+    color: #FFE411;
 }
 .tt-nav.sticky .search-trigger i.material-icons {
     line-height: 62px;
@@ -2275,11 +2275,15 @@ KEY FRAME
     margin: 35px 0;
 }
 #preloader .progress .indeterminate{
-    background:#03a9f4;
+    background:#FFE411;
 }
 
 
 /* Custom Styles */
+@font-face {
+    font-family: Furore;
+    src: url("../fonts/Furore.otf") format("opentype");
+}
 .purnkleen-yellow-btn {
     background-color: #FFE411;
     color: black;
@@ -2299,17 +2303,20 @@ KEY FRAME
     }
 }
 .motto {
-    /*color: #FFE411;*/
     font-size: 2vw;
-    /*text-shadow: 0px 0px 10px rgba(0,0,0,0.74);*/
-    /*font-weight: bold;*/
     text-transform: uppercase;
-    /*padding-top: 30vh;*/
-    /*line-height: 2.3vw;*/
 }
 .solutions {
     color: #C9302C;
 }
+.space-font {
+    font-family: Furore, 'Raleway', sans-serif!important;
+}
+.feature-link {
+    color: #999;
+}
+
+
 
 
 /*!**/

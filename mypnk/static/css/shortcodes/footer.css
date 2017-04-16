@@ -5,7 +5,7 @@ Footer
     margin-bottom: 24px;
 }
 .footer p {
-    color: #c9f0ff;
+    color: #000;
 }
 
 .footer-one .primary-footer {
@@ -17,11 +17,11 @@ Footer
 }
 
 .copy-text a{
-    color: #fff;
+    color: #000;
 }
 .copy-text,
 .copy-text a:hover{
-    color: #81ddff;
+    color: #000;
 }
 
 /*
@@ -145,25 +145,25 @@ Subscription Widget
     padding: 0 0 0 12px;
 }
 .primary-footer .form-control:focus {
-    border: 1px solid #c9f0ff!important;
+    border: 1px solid #000!important;
     box-shadow: none!important;
 }
 .primary-footer .form-group input[type="text"],
 .primary-footer .form-group input[type="email"] {
-    color: #c9f0ff;
+    color: #000;
     background-color: #0288d1;
     width: 76%;
     float: left;
 }
 
 .primary-footer.brand-bg .form-group input::-webkit-input-placeholder {
-   color: #c9f0ff;
+   color: #000;
 }
 .primary-footer.brand-bg .form-group input::-moz-placeholder {
-   color: #c9f0ff;  
+   color: #000;
 }
 .primary-footer.brand-bg .form-group input:-ms-input-placeholder {  
-   color: #c9f0ff; 
+   color: #000;
 }
 
 .primary-footer .form-group {
@@ -342,7 +342,7 @@ Footer 4
     text-transform: uppercase;
 }
 .footer-four .secondary-footer ul li a:hover {
-    color: #81ddff;
+    color: #000;
 }
 
 .footer-four .back-top {
