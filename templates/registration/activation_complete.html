@@ -1,31 +1,39 @@
-{% extends "base.html" %}
+{% extends "base2.html" %}
 
 {% block title %}Account activation complete{% endblock %}
 
 {% block content %}
 
-    <div id="purnkleenAboutFeature">
+    <!--page title start-->
+    <section class="page-title ptb-70">
         <div class="container">
             <div class="row">
-                <div class="col-sm-7">
-                    <div class="team-motto">Woohoo!</div>
+                <div class="col-md-12">
+                    <h2 class="text-bold">Account Activation Complete</h2>
+                    <ol class="breadcrumb">
+                        <li><a href="{% url 'index' %}">Home</a></li>
+                        <li class="active">Account Activation Complete</li>
+                    </ol>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
+    <!--page title end-->
 
-    <div class="container">
-        <h1>Success!</h1>
-        <p class="lead">Account successfully activated!</p>
-        <p>You can now sign in to the website.</p>
+    <section class="section-padding">
+        <div class="container">
 
-        <p><a href="{% url 'auth_login' %}"
-            class="btn btn-lg purnkleen-red-btn"
-            role="button">Sign in</a>
-        </p>
+            <div class="text-center mb-80">
+                <h1 class="section-title text-uppercase">Account Activation Complete</h1>
+                <p class="section-sub">
+                    You can now sign in to the website.
+                </p>
+                <div class="btn-group padding-top-50">
+                    <a class="btn btn-lg green dark-text" href="{% url 'auth_login' %}">Sign in</a>
+                </div>
+            </div>
 
-        <hr class="featurette-divider">
-
-    </div>
+        </div>
+    </section>
 
 {% endblock %}
