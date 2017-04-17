@@ -1,31 +1,41 @@
-{% extends "base.html" %}
+{% extends "base2.html" %}
 
 
 {% block title %}Account activation error{% endblock %}
 
 {% block content %}
 
-    <div id="purnkleenAboutFeature">
+    <!--page title start-->
+    <section class="page-title ptb-70">
         <div class="container">
             <div class="row">
-                <div class="col-sm-7">
-                    <div class="team-motto"><span class="solutions">OH SHIT!</span></div>
+                <div class="col-md-12">
+                    <h2 class="text-bold">Account Activation Error</h2>
+                    <ol class="breadcrumb">
+                        <li><a href="{% url 'index' %}">Home</a></li>
+                        <li class="active">Account Activation Error</li>
+                    </ol>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
+    <!--page title end-->
 
-    <div class="container">
-        <div class="row">
-            <h1>Account activation error</h1>
-            <div class="alert alert-danger col-md-9">
-                <p>The activation key <strong>{{ activation_key }}</strong> is invalid or expired.</p>
+    <section class="section-padding">
+        <div class="container">
+
+            <div class="text-center mb-80">
+                <h1 class="section-title text-uppercase">Account Activation Error</h1>
+                <p class="section-sub">
+                    The activation key <strong>{{ activation_key }}</strong> is invalid or expired.
+                </p>
+                <div class="btn-group padding-top-50">
+                    <a class="btn btn-lg yellow dark-text" href="{% url 'index' %}">Home</a>
+                </div>
             </div>
+
         </div>
-
-        <hr class="featurette-divider">
-
-    </div>
+    </section>
 
 {% endblock %}
 	
