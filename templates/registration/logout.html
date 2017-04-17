@@ -1,26 +1,37 @@
-{% extends "base.html" %}
+{% extends "base2.html" %}
 {% load bootstrap3 %}
 
-{% block title %}Login{% endblock %}
+{% block title %}Logout{% endblock %}
 
 {% block content %}
 
-    <div id="purnkleenAboutFeature">
+    <!--page title start-->
+    <section class="page-title ptb-70">
         <div class="container">
             <div class="row">
-                <div class="col-sm-7">
-                    <div class="team-motto">Sorry to see you go<br><span class="solutions">Bye Felicia!</span></div>
+                <div class="col-md-12">
+                    <h2 class="text-bold">Log Out</h2>
+                    <ol class="breadcrumb">
+                        <li><a href="{% url 'index' %}">Home</a></li>
+                        <li class="active">Log Out</li>
+                    </ol>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
+    <!--page title end-->
 
-    <div class="container">
-        <h1>Logout</h1>
-        <p class="lead">You are now logged out.</p>
-        <div class="btn-group">
-            <a class="btn btn-lg purnkleen-yellow-btn" href="{% url 'index' %}">Home</a>
+    <section class="section-padding">
+        <div class="container">
+
+            <div class="text-center mb-80">
+                <h1 class="section-title text-uppercase">You are now logged out</h1>
+                <div class="btn-group padding-top-50">
+                    <a class="btn btn-lg yellow dark-text" href="{% url 'index' %}">Take me Home</a>
+                </div>
+            </div>
+
         </div>
-    </div>
+    </section>
 
 {% endblock %}
