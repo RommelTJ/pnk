@@ -2315,6 +2315,12 @@ KEY FRAME
 .feature-link {
     color: #999;
 }
+.dl-horizontal dt {
+    width: 300px;
+}
+.dl-horizontal dd {
+    margin-left: 350px;
+}
 
 
 
