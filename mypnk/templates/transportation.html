@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+{% extends 'base2.html' %}
 
 {% load static %}
 
@@ -6,24 +6,35 @@
 
 {% block container %}
 
-    <div id="purnkleenServicesFeature">
+    <!--page title start-->
+    <section class="page-title ptb-70">
         <div class="container">
             <div class="row">
-                <div class="col-sm-7">
-                    <div class="jobs-motto">Pur'N'Kleen Services<br/><span class="solutions">Transportation</span></div>
+                <div class="col-md-12">
+                    <h2 class="text-bold">Transportation Services</h2>
+                    <ol class="breadcrumb">
+                        <li><a href="{% url 'index' %}">Home</a></li>
+                        <li class="active">Transportation Services</li>
+                    </ol>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
+    <!--page title end-->
 
-    <div class="container purnkleen-marketing">
+    <section class="section-padding">
+        <div class="container">
 
-        <div class="row featurette">
-            <div class="col-md-12">
-                <h2 class="featurette-heading">Coming with Star Citizen 3.0</h2>
-                <p class="lead">
-                    The Star Citizen universe is a vast expanse of systems and planets, but Pur'N'Kleen makes shipping
-                    easy. We offer two reliable services:
+            <div class="text-center mb-80">
+                <h1 class="section-title text-uppercase">Pur'N'Kleen Transportation Services</h1>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>Coming with Star Citizen 3.0</h1>
+                    <p class="lead">
+                        The Star Citizen universe is a vast expanse of systems and planets, but Pur'N'Kleen makes shipping
+                        easy. We offer two reliable services:
 
                     <dl class="dl-horizontal lead">
                         <dt>Pur'N'Kleen Priority</dt>
@@ -31,16 +42,17 @@
                         <dt>Pur'N'Kleen Economy</dt>
                         <dd>If you can trade time for savings, this services provides reliable shipments at a lower price.</dd>
                     </dl>
-                </p>
+                    </p>
 
-                <p class="lead">
-                    Pur'N'Kleen also offers logistics support for your Organization. Take your business across star
-                    systems while leveraging our reliable service. Please don't hesitate to
-                    <a href="https://discord.gg/Q9WHD3J">contact us</a> with your shipping and supply chain needs.
-                </p>
+                    <p class="lead">
+                        Pur'N'Kleen also offers logistics support for your Organization. Take your business across star
+                        systems while leveraging our reliable service. Please don't hesitate to
+                        <a href="https://discord.gg/Q9WHD3J">contact us</a> with your shipping and supply chain needs.
+                    </p>
+                </div>
             </div>
-        </div>
 
-    </div>
+        </div>
+    </section>
 
 {% endblock %}
