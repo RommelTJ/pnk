@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+{% extends 'base2.html' %}
 
 {% load static %}
 
@@ -6,30 +6,38 @@
 
 {% block container %}
 
-    <div id="purnkleenAboutFeature">
+    <!--page title start-->
+    <section class="page-title ptb-70">
         <div class="container">
             <div class="row">
-                <div class="col-sm-7">
-                    <div class="jobs-motto">About Pur'N'Kleen<br/><span class="solutions">Vision Statement</span></div>
+                <div class="col-md-12">
+                    <h2 class="text-bold">Our Vision</h2>
+                    <ol class="breadcrumb">
+                        <li><a href="#">Home</a></li>
+                        <li class="active">Our Vision</li>
+                    </ol>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
+    <!--page title end-->
 
-    <div class="container purnkleen-marketing">
+    <section class="section-padding">
+        <div class="container">
 
-        <div class="row featurette">
-            <div class="col-md-12">
-                <h2 class="featurette-heading">Vision Statement</h2>
-                <p class="lead">
-                    Our vision is to deliver unique, high value and easy-to-use solutions for a wide variety of
-                    maintenance and supply chain needs of Star Citizen organizations. We will become the premier and
-                    sole organizational provider of these services in our area of operations through strategic
-                    partnerships with our allies.
-                </p>
+            <div class="row featurette">
+                <div class="col-md-12">
+                    <h1>Vision Statement</h1>
+                    <p class="lead">
+                        Our vision is to deliver unique, high value and easy-to-use solutions for a wide variety of
+                        maintenance and supply chain needs of Star Citizen organizations. We will become the premier and
+                        sole organizational provider of these services in our area of operations through strategic
+                        partnerships with our allies.
+                    </p>
+                </div>
             </div>
-        </div>
 
-    </div>
+        </div>
+    </section>
 
 {% endblock %}
