@@ -2319,10 +2319,53 @@ KEY FRAME
     width: 300px;
 }
 .dl-horizontal dd {
-    margin-left: 350px;
+    margin-left: 320px;
 }
 
-
+/* Player List */
+.player_list {
+    margin: 0;
+    padding: 0;
+}
+.odd {
+    background: #E5E5E5;
+}
+.even {
+    background: #FFFFFF;
+}
+.player_row {
+    list-style: none;
+    padding: 1em;
+}
+.player_image_container {
+    border-radius: 5px;
+    display: inline-block;
+    height: 88px;
+    overflow: hidden;
+    position: relative;
+    width: 88px;
+    margin: 0.5em 1em 0 0;
+}
+.player_info {
+    width: 60%;
+    display: inline-block;
+    vertical-align: top;
+}
+.player_name {
+    color: black;
+    font-size: 1.75em;
+}
+.category {
+    text-transform: uppercase;
+    color: black;
+    font-weight: bold;
+}
+@media (min-width: 45.7em) {
+    .player_row {
+        margin: 0;
+        padding: 1em;
+    }
+}
 
 
 /*!**/

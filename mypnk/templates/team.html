@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+{% extends 'base2.html' %}
 
 {% load static %}
 
@@ -6,45 +6,55 @@
 
 {% block container %}
 
-<div id="purnkleenAboutFeature">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-7">
-                <div class="team-motto">THERE ARE DOZENS OF US<br><span class="solutions">DOZENS!</span></div>
+    <!--page title start-->
+    <section class="page-title ptb-70">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="text-bold">Our Team</h2>
+                    <ol class="breadcrumb">
+                        <li><a href="{% url 'index' %}">Home</a></li>
+                        <li class="active">Our Team</li>
+                    </ol>
+                </div>
             </div>
         </div>
-    </div>
-</div>
+    </section>
+    <!--page title end-->
 
-<div id="team" class="container purnkleen-marketing">
+    <section class="section-padding">
+        <div id="team" class="container">
 
-    <div class="row featurette">
-        <div class="col-md-12">
-            <h2 class="featurette-heading">Current Members</h2>
-            <ul class="player_list">
-                {% for employee in pnkemployee_list %}
-                    <li class="player_row {{forloop.counter|divisibleby:2|yesno:"even,odd"}}">
-                        <div class="player_image_container">
-                            <a href="{% url 'my_profile' employee.emp_no %}">
-                                <img src="{% if employee.image.thumbnail.url != None %}{{ employee.image.thumbnail.url }}{% else %}{% static 'img/star_citizen_marine.png' %}{% endif %}"
-                                     alt="{{ employee.user.first_name }} {{ employee.user.last_name }}"
-                                     title="{{ employee.user.first_name }} {{ employee.user.last_name }}"
-                                     height="125" width="88">
-                            </a>
-                        </div>
-                        <div class="player_info">
-                            <div class="player_name">
-                                <i class="flag2x {{ employee.country.flag_css }}"></i>
-                                {{ employee.user.first_name }} {{ employee.user.last_name }}
-                            </div>
-                            <div class="player_stats">
-                                <div class="handle">
-                                    <span class="category">Callsign:</span>
-                                    <span>{{ employee.callsign }}</span>
+            <div class="text-center mb-80">
+                <h1 class="section-title text-uppercase">Current Members</h1>
+            </div>
+
+            <div class="row featurette">
+                <div class="col-md-12">
+                    <ul class="player_list">
+                        {% for employee in pnkemployee_list %}
+                            <li class="player_row {{forloop.counter|divisibleby:2|yesno:"even,odd"}}">
+                                <div class="player_image_container">
+                                    <a href="{% url 'my_profile' employee.emp_no %}">
+                                        <img src="{% if employee.image.thumbnail.url != None %}{{ employee.image.thumbnail.url }}{% else %}{% static 'img/star_citizen_marine.png' %}{% endif %}"
+                                             alt="{{ employee.user.first_name }} {{ employee.user.last_name }}"
+                                             title="{{ employee.user.first_name }} {{ employee.user.last_name }}"
+                                             height="125" width="88">
+                                    </a>
                                 </div>
-                                <div class="type">
-                                    <span class="category">Status:</span>
-                                    <span>
+                                <div class="player_info">
+                                    <div class="player_name">
+                                        <i class="flag2x {{ employee.country.flag_css }}"></i>
+                                        {{ employee.user.first_name }} {{ employee.user.last_name }}
+                                    </div>
+                                    <div class="player_stats">
+                                        <div class="handle">
+                                            <span class="category">Callsign:</span>
+                                            <span>{{ employee.callsign }}</span>
+                                        </div>
+                                        <div class="type">
+                                            <span class="category">Status:</span>
+                                            <span>
                                         {% if employee.type == 'MEM' %}
                                             Member-Owner
                                         {% elif employee.type == 'AFF' %}
@@ -57,10 +67,10 @@
                                             N/A
                                         {% endif %}
                                     </span>
-                                </div>
-                                <div class="primary_activity">
-                                    <span class="category">Primary Activity:</span>
-                                    <span>
+                                        </div>
+                                        <div class="primary_activity">
+                                            <span class="category">Primary Activity:</span>
+                                            <span>
                                         {% if employee.primary_activity == 'HUN' %}
                                             Bounty Hunting
                                         {% elif employee.primary_activity == 'ENG' %}
@@ -91,10 +101,10 @@
                                             N/A
                                         {% endif %}
                                     </span>
-                                </div>
-                                <div class="secondary_activity">
-                                    <span class="category">Secondary Activity:</span>
-                                    <span>
+                                        </div>
+                                        <div class="secondary_activity">
+                                            <span class="category">Secondary Activity:</span>
+                                            <span>
                                         {% if employee.secondary_activity == 'HUN' %}
                                             Bounty Hunting
                                         {% elif employee.secondary_activity == 'ENG' %}
@@ -125,37 +135,39 @@
                                             N/A
                                         {% endif %}
                                     </span>
+                                        </div>
+                                        <div class="date">
+                                            <span class="category">Hire Date:</span>
+                                            <span>{{ employee.hire_date|date:"d M Y" }}</span>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="date">
-                                    <span class="category">Hire Date:</span>
-                                    <span>{{ employee.hire_date|date:"d M Y" }}</span>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                {% endfor %}
-            </ul>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+
+                {% if is_paginated %}
+                    <ul class="pagination center-align">
+                        {% if page_obj.has_previous %}
+                            <li class="waves-effect">
+                                <a href="?page={{ page_obj.previous_page_number }}">Previous</a>
+                            </li>
+                        {% endif %}
+                        <li class="waves-effect">
+                            <span>Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}</span>
+                        </li>
+                        {% if page_obj.has_next %}
+                            <li class="waves-effect">
+                                <a href="?page={{ page_obj.next_page_number }}">Next</a>
+                            </li>
+                        {% endif %}
+                    </ul>
+                {% endif %}
+            </div>
+
         </div>
+    </section>
 
-        {% if is_paginated %}
-            <ul class="pagination center-align">
-                {% if page_obj.has_previous %}
-                    <li class="waves-effect">
-                        <a href="?page={{ page_obj.previous_page_number }}">Previous</a>
-                    </li>
-                {% endif %}
-                <li class="waves-effect">
-                    <span>Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}</span>
-                </li>
-                {% if page_obj.has_next %}
-                    <li class="waves-effect">
-                        <a href="?page={{ page_obj.next_page_number }}">Next</a>
-                    </li>
-                {% endif %}
-            </ul>
-        {% endif %}
-    </div>
-
-</div>
 
 {% endblock %}
