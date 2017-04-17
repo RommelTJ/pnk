@@ -2377,6 +2377,9 @@ KEY FRAME
     pointer-events: none;
 }
 
+label {
+    font-size: unset;
+}
 
 /*!**/
  /** Globals*/
