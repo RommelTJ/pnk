@@ -1,45 +1,57 @@
-{% extends 'base.html' %}
+{% extends 'base2.html' %}
 {% load bootstrap3 %}
 
 {% load static %}
 
-{% block title %}Pur'N'Kleen Employees{% endblock %}
+{% block title %}Pur'N'Kleen Profile Registration{% endblock %}
 
 {% block container %}
-    <div id="purnkleenAboutFeature">
+
+    <!--page title start-->
+    <section class="page-title ptb-70">
         <div class="container">
             <div class="row">
-                <div class="col-sm-7">
-                    <div class="team-motto">THERE ARE DOZENS OF US<br><span class="solutions">DOZENS!</span></div>
+                <div class="col-md-12">
+                    <h2 class="text-bold">Profile Registration</h2>
+                    <ol class="breadcrumb">
+                        <li><a href="{% url 'index' %}">Home</a></li>
+                        <li class="active">Profile Registration</li>
+                    </ol>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
+    <!--page title end-->
 
-    <div class="container">
+    <section class="section-padding">
+        <div class="container">
 
-        {% if pnk_employee %}
-            <div class="col-md-12">
-                <h1 class="featurette-heading">You are already signed up</h1>
-                <p class="lead">We appreciate the enthusiasm, but you can't sign up twice...</p>
-                <div class="btn-group">
-                    <a class="btn btn-lg purnkleen-yellow-btn" href="{% url 'index' %}">Home</a>
-                </div>
-            </div>
-        {% else %}
-            <form enctype="multipart/form-data" action="{% url 'pnk_profile_create' %}" method="post" role="form" class="form-horizontal">
-                {% csrf_token %}
-                {% bootstrap_form form layout='horizontal' %}
-
-                {% buttons %}
-                    <div class="col-sm-offset-2 col-sm-10">
-                        <button type="submit" class="btn btn-lg purnkleen-red-btn">
-                            {% bootstrap_icon "star" %} Sign Me Up!
-                        </button>
+            {% if pnk_employee %}
+                <div class="text-center mb-80">
+                    <h1 class="section-title text-uppercase">You are already signed up</h1>
+                    <p class="section-sub">
+                        We appreciate the enthusiasm, but you can't sign up twice...
+                    </p>
+                    <div class="btn-group padding-top-50">
+                        <a class="btn btn-lg yellow dark-text" href="{% url 'index' %}">Home</a>
                     </div>
-                {% endbuttons %}
-            </form>
-        {% endif %}
+                </div>
+            {% else %}
+                <form enctype="multipart/form-data" action="{% url 'pnk_profile_create' %}" method="post" role="form" class="form-horizontal">
+                    {% csrf_token %}
+                    {% bootstrap_form form layout='horizontal' %}
 
-    </div>
+                    {% buttons %}
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <button type="submit" class="btn btn-lg yellow dark-text">
+                                {% bootstrap_icon "star" %} Sign Me Up!
+                            </button>
+                        </div>
+                    {% endbuttons %}
+                </form>
+            {% endif %}
+
+        </div>
+    </section>
+
 {% endblock %}
